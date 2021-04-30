@@ -672,32 +672,63 @@ $titulo2:  'Source Sans Pro', sans-serif;
   /*------ Final Contacto ------- */
    /*----- Footer ---------*/
    .footer{
-     display: flex;
-     flex-direction: row;
-     background-image: url(../imagenes/fondo.jpg);
-     background-size: cover;
-     justify-content: space-evenly;
-     &__info{
-      font-family: 'Source Sans Pro', sans-serif;
-      font-size: 20px;
-      position: relative;
-      top: 10px;
-     }
-     &__link{
-       color: #fff;
-       font-family: 'Source Sans Pro', sans-serif;
-       align-self: end;
-       word-spacing: 4px;
-       position: relative;
-       top:25px;
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-template-areas: " texto redes"
+                        "diseñador diseñador";
+    background-color: #1b1b1b;
+    justify-content: center;
+    align-items: center;
+    
+    &__contenido{
+      grid-area: texto;
+      align-self: center;
+    }            
+    &__hr{
+      width: 70%;
+      background-color: #eee;
+      height: 1px;
+      align-self: center;
+    }        
+   
+    &__titulo{
+      font-family: $titulo;
+      font-size: 25px;
+      color: #fff;
+      align-self: center;
+      align-content: center;
+      padding-top:30px;
+      padding-left: 170px;
+    }
+    &__redesTitulo{
+      @extend  .footer__titulo;
+    }
+    &__redes{
+      grid-area: redes;
+      font-size: 30px;
+      align-self: center;
+    }
+    &__redes i{
+      color: #9c9c9c;
+      text-decoration: none;
+      align-self: center;
 
-     }
-     &__link:hover{
-       color: #646464;
-       text-decoration: none;
-     }
+      
+    }
+    &__parrafo{
+      color: #9c9c9c;
+      font-size: 18px;
+      padding: 0 80px;
+      
+    }
+    &__titular{
+      grid-area: diseñador;
+      background-color: #272727;
+      align-self: center;
+      align-items: center;
+    }
    }
-
 
   /*------ media queries---------*/
    @media only screen and (max-width: 768px){

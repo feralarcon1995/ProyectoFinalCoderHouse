@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*---- variables-----*/
 /*--- fin variables---*/
 * {
@@ -485,26 +486,46 @@ p {
 /*------ Final Contacto ------- */
 /*----- Footer ---------*/
 .footer {
-  display: flex;
-  flex-direction: row;
-  background-image: url(../imagenes/fondo.jpg);
-  background-size: cover;
-  justify-content: space-evenly; }
-  .footer__info {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 20px;
-    position: relative;
-    top: 10px; }
-  .footer__link {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  grid-template-areas: " texto redes" "diseñador diseñador";
+  background-color: #1b1b1b;
+  justify-content: center;
+  align-items: center; }
+  .footer__contenido {
+    grid-area: texto;
+    align-self: center; }
+  .footer__hr {
+    width: 70%;
+    background-color: #eee;
+    height: 1px;
+    align-self: center; }
+  .footer__titulo, .footer__redesTitulo {
+    font-family: "Bebas Neue", cursive;
+    font-size: 25px;
     color: #fff;
-    font-family: 'Source Sans Pro', sans-serif;
-    align-self: end;
-    word-spacing: 4px;
-    position: relative;
-    top: 25px; }
-  .footer__link:hover {
-    color: #646464;
-    text-decoration: none; }
+    align-self: center;
+    align-content: center;
+    padding-top: 30px;
+    padding-left: 170px; }
+  .footer__redes {
+    grid-area: redes;
+    font-size: 30px;
+    align-self: center; }
+  .footer__redes i {
+    color: #9c9c9c;
+    text-decoration: none;
+    align-self: center; }
+  .footer__parrafo {
+    color: #9c9c9c;
+    font-size: 18px;
+    padding: 0 80px; }
+  .footer__titular {
+    grid-area: diseñador;
+    background-color: #272727;
+    align-self: center;
+    align-items: center; }
 
 /*------ media queries---------*/
 @media only screen and (max-width: 768px) {
