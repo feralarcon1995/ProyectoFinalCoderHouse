@@ -698,12 +698,13 @@ $titulo2:  'Source Sans Pro', sans-serif;
     grid-template-areas: " texto redes"
                         "diseñador diseñador";
     background-color: #1b1b1b;
-    justify-content: center;
-    align-items: center;
+    
     
     &__contenido{
       grid-area: texto;
       align-self: center;
+      padding-left: 30px;
+      transition: 1s;
     }            
     &__hr{
       width: 70%;
@@ -716,9 +717,9 @@ $titulo2:  'Source Sans Pro', sans-serif;
       font-family: $titulo;
       font-size: 25px;
       color: #fff;
-      
+    
       padding-top:30px;
-      padding-left: 170px;
+      padding-left: 130px;
     }
     &__redesTitulo{
       @extend  .footer__titulo;
@@ -727,16 +728,18 @@ $titulo2:  'Source Sans Pro', sans-serif;
       grid-area: redes;
       font-size: 30px;
     }
-    &__redes i{
+    &__link{
       color: #9c9c9c;
       text-decoration: none;
+      padding-left: 40px;
+      padding-top: 20px;
 
       
     }
     &__parrafo{
       color: #9c9c9c;
       font-size: 18px;
-      padding: 0 80px;
+      padding-right: 140px;
       
     }
     &__titular{
@@ -747,6 +750,7 @@ $titulo2:  'Source Sans Pro', sans-serif;
       background-color: #272727;
       align-self: center;
       align-items: center;
+      word-spacing: 3px;
     }
     &__diseñador{
       font-family: $titulo2;
@@ -758,7 +762,23 @@ $titulo2:  'Source Sans Pro', sans-serif;
       color: #c0c0c0;
       text-decoration: none;
       font-size: 19px;
+      transition: 1s;
     }
+    &__contenido:hover{
+      transform: scale(1.04);
+      color: #fff;
+    }
+    &__link:hover{
+      transform: scale(1.04);
+      color: #fff;
+      text-decoration: none;
+    }
+    &__linke:hover{
+      transform: scale(1.04);
+      color: #fff;
+      text-decoration: none;
+    }
+
    }
 
   /*------ media queries---------*/
@@ -805,22 +825,24 @@ $titulo2:  'Source Sans Pro', sans-serif;
      }
    
      .noticias{
-       display: grid;
-       grid-template-columns: 33% 33% 33%;
-       grid-template-rows:auto;
-       padding-left: 15px;
-       height: 500px;
-       &__tarjeta{
-         width: 60%;
-         height: 410px;
-       }
-      
-     }
+      padding-left: 15px;
+
+      &__tarjeta{
+        padding: 0px;
+        width: 95%;
+      }
+  
+     &____info{
+      font-size: 13px;
+    }
+    &__btn{
+      width: 80%;
+     margin: 0px;
+    }
+    }
      
      
-     .noticias__info{
-       font-size: 12px;
-     }
+     
      
      /*----- Integrantes ----*/
     .inte__titulo{
@@ -981,11 +1003,21 @@ $titulo2:  'Source Sans Pro', sans-serif;
      
      /*----- footer --- */
      
-     .footer__link{
-       position: relative;
-       top: 20px;
-       left: 30px; 
+     .footer__titulo{
+       padding-left: 30px;
      }
+     .footer__h3 {
+       width: 90%;
+       margin-left: 40px;
+    
+    }
+    .footer__link{
+      padding-left: 20px;
+    }
+    .footer__parrafo{
+      padding: 0px;
+    }
+     
 } 
    
 @media only screen and (max-width: 480px){
@@ -1267,20 +1299,45 @@ $titulo2:  'Source Sans Pro', sans-serif;
   
   /*----- footer ---*/
   .footer{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: "contenido"
+                         "redes"
+                         "diseñador";
     justify-content: center;
+    align-items: center;
+    align-content: center;
 
-    &__info{
-      font-size: 16px;
-      align-self: center;
+    &__contenido{
+      grid-area: contenido;
+    }
+    &__hr{
+      margin-left: 50px;
+    }
+    &__titulo{
+      padding-left: 160px;
+    }
+    &__redesTitulo{
+      padding-left: 90px;
     }
     &__redes{
-      position: relative;
-      bottom: 30px;
-      left: 40px;
+      grid-area: redes;
+      height: 170px;
+      padding-left: 30px;
+    }
+    &__titular{
+      grid-area: diseñador;
+    }
+    &__parrafo{
+      padding-right: 80px;
+    }
+    
+    &__link{
+      margin-left: 20px;
     }
   }
+
 
 
 

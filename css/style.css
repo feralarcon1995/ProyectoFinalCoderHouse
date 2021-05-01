@@ -507,12 +507,12 @@ p {
   grid-template-columns: 50% 50%;
   grid-template-rows: auto;
   grid-template-areas: " texto redes" "diseñador diseñador";
-  background-color: #1b1b1b;
-  justify-content: center;
-  align-items: center; }
+  background-color: #1b1b1b; }
   .footer__contenido {
     grid-area: texto;
-    align-self: center; }
+    align-self: center;
+    padding-left: 30px;
+    transition: 1s; }
   .footer__hr {
     width: 70%;
     background-color: #eee;
@@ -523,17 +523,19 @@ p {
     font-size: 25px;
     color: #fff;
     padding-top: 30px;
-    padding-left: 170px; }
+    padding-left: 130px; }
   .footer__redes {
     grid-area: redes;
     font-size: 30px; }
-  .footer__redes i {
+  .footer__link {
     color: #9c9c9c;
-    text-decoration: none; }
+    text-decoration: none;
+    padding-left: 40px;
+    padding-top: 20px; }
   .footer__parrafo {
     color: #9c9c9c;
     font-size: 18px;
-    padding: 0 80px; }
+    padding-right: 140px; }
   .footer__titular {
     grid-area: diseñador;
     display: flex;
@@ -541,7 +543,8 @@ p {
     justify-content: center;
     background-color: #272727;
     align-self: center;
-    align-items: center; }
+    align-items: center;
+    word-spacing: 3px; }
   .footer__diseñador {
     font-family: "Source Sans Pro", sans-serif;
     color: #fff;
@@ -550,7 +553,19 @@ p {
     font-family: "Bebas Neue", cursive;
     color: #c0c0c0;
     text-decoration: none;
-    font-size: 19px; }
+    font-size: 19px;
+    transition: 1s; }
+  .footer__contenido:hover {
+    transform: scale(1.04);
+    color: #fff; }
+  .footer__link:hover {
+    transform: scale(1.04);
+    color: #fff;
+    text-decoration: none; }
+  .footer__linke:hover {
+    transform: scale(1.04);
+    color: #fff;
+    text-decoration: none; }
 
 /*------ media queries---------*/
 @media only screen and (max-width: 768px) {
@@ -580,16 +595,15 @@ p {
     .tarjeta__parrafo {
       font-size: 15px; }
   .noticias {
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    grid-template-rows: auto;
-    padding-left: 15px;
-    height: 500px; }
+    padding-left: 15px; }
     .noticias__tarjeta {
-      width: 60%;
-      height: 410px; }
-  .noticias__info {
-    font-size: 12px; }
+      padding: 0px;
+      width: 95%; }
+    .noticias____info {
+      font-size: 13px; }
+    .noticias__btn {
+      width: 80%;
+      margin: 0px; }
   /*----- Integrantes ----*/
   .inte__titulo {
     font-size: 50px; }
@@ -690,10 +704,15 @@ p {
   .form__label {
     font-size: 20px; }
   /*----- footer --- */
+  .footer__titulo, .footer__redesTitulo {
+    padding-left: 30px; }
+  .footer__h3 {
+    width: 90%;
+    margin-left: 40px; }
   .footer__link {
-    position: relative;
-    top: 20px;
-    left: 30px; } }
+    padding-left: 20px; }
+  .footer__parrafo {
+    padding: 0px; } }
 
 @media only screen and (max-width: 480px) {
   /*---- nav ------ */
@@ -879,13 +898,28 @@ p {
     grid-area: info1; }
   /*----- footer ---*/
   .footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; }
-    .footer__info {
-      font-size: 16px;
-      align-self: center; }
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: "contenido" "redes" "diseñador";
+    justify-content: center;
+    align-items: center;
+    align-content: center; }
+    .footer__contenido {
+      grid-area: contenido; }
+    .footer__hr {
+      margin-left: 50px; }
+    .footer__titulo, .footer__redesTitulo {
+      padding-left: 160px; }
+    .footer__redesTitulo {
+      padding-left: 90px; }
     .footer__redes {
-      position: relative;
-      bottom: 30px;
-      left: 40px; } }
+      grid-area: redes;
+      height: 170px;
+      padding-left: 30px; }
+    .footer__titular {
+      grid-area: diseñador; }
+    .footer__parrafo {
+      padding-right: 80px; }
+    .footer__link {
+      margin-left: 20px; } }
