@@ -9,7 +9,7 @@ $titulo2:  'Source Sans Pro', sans-serif;
       font-size: $tamaño;
       text-align: center;
       margin: 0;
-      padding-top: 90px;
+      padding-top: 5.625rem;
 }
 
 /*--- fin variables---*/
@@ -49,37 +49,37 @@ $titulo2:  'Source Sans Pro', sans-serif;
   .contenedor{
     background-image: url(../imagenes/img-1.jpg);
     background-size: cover;
-    height: 700px;
+    height: 743.75rem;
     width: 100%; 
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto;
     overflow: hidden;
-    margin-top: 40px;
+    margin-top: 2.5rem;
     
 } 
 
 .contenido{
   background-color: rgba(238, 238, 238, 0.89);
-  height: 200px;
+  height: 12.5rem;
   grid-column: 1/span 9;
   position: relative;
-  top: 300px;
-  right: 40px;
-  padding-left: 250px;
+  top: 18.75rem;
+  right: 2.5rem;
+  padding-left: 15.625rem;
   transition: 1s;
 
   &__index{
   font-family: $titulo;
-  font-size: 60px;
+  font-size: 3.75rem;
   color:#202020;
-  padding-left: 18px;
+  padding-left: 1.125rem;
   }
   &__parrafo{
     font-family: $titulo2;
   color: #1b1b1b;
   position: relative;
-  bottom: 25px;
+  bottom: 1.563rem;
   }
   .contenido:hover{
     transform: scale(1.03);
@@ -93,7 +93,7 @@ $titulo2:  'Source Sans Pro', sans-serif;
   
   .contenedorDos{
     background-color: #fff;
-    height:500px ;
+    height:31.25rem ;
   }
   
   .tarjeta{
@@ -102,46 +102,46 @@ $titulo2:  'Source Sans Pro', sans-serif;
       grid-template-rows: auto;
       grid-template-areas: "texto img";
       justify-content: center;
-      height: 400px;
+      height:25rem;
       width: 100%; 
       overflow: hidden;
       position: relative;
-      top: 70px;
+      top: 4.375rem;
      
 
       &__img{
         grid-area: img;
         width:100%;
-        height: 300px;
+        height: 18.75rem;
         align-self: center;          
 
       }
       &__contenido{
           color: #000;
           padding: 20px;
-          height: 300px;
+          height: 18.75rem;
           align-self: center;          
 
       }
       &__span{
         background-color:#222222;
-        width: 5px;
-        height: 30px;
+        width: 0.313rem;
+        height: 1.875rem;
         position: relative;
-        bottom: 45px;
-        left:20px;
+        bottom: 2.813rem;
+        left:1.25rem;
       }
       &__titulo{
           color: #000;
           font-family: $titulo;
-          font-size: 30px;
-          padding-left: 40px;
+          font-size: 1.875rem;
+          padding-left: 2.5rem;
       }
       &__parrafo{
           color: #444444;
-          font-size: 16px;
+          font-size: 1rem;
           position: relative;
-          bottom:20px;
+          bottom:1.25rem;
       }
   }
   
@@ -154,21 +154,21 @@ $titulo2:  'Source Sans Pro', sans-serif;
     grid-template-rows: auto;
     justify-content: space-evenly;
     align-content: center;
-    height: 600px;
-    padding-left: 40px;
+    height: 37.5rem;
+    padding-left: 2.5rem;
 
    &__titular{
      font-family: $titulo;
      color: #fff;
      grid-row: 1;
-     font-size: 40px;
+     font-size: 2.5rem;
      align-self: center;
      align-items: center;
    }
    &__hr{
      width: 80%;
      background-color: #fff;
-     height: 1px;
+     height: 0.063rem;
      grid-row: 1;
    }
    
@@ -176,8 +176,8 @@ $titulo2:  'Source Sans Pro', sans-serif;
       grid-row: 2;
       background-color: #000000;
       width: 90%;
-      padding: 10px;
-      height: 460px;
+      padding:0.625rem;
+      height: 28.75rem;
       transition: 1s;
       box-shadow: 1px 2px 5px 0px rgb(78, 78, 78);
       align-self: center;
@@ -189,31 +189,14 @@ $titulo2:  'Source Sans Pro', sans-serif;
     }
     &__info{
       font-family:$titulo2;
-      font-size: 14px;
+      font-size: 1rem;
       color: #ffffff;
     }
-    &__btn{
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-      background-color: #303030;
-      margin-top: 5px;
-      margin-left: 160px ;
-      border-radius: 4px;
-      padding:10px;
-      width: 40%;
-      color: #fff;
-      transition: 1s;
-    }
+    
     &__tarjeta:hover{
       transform: scale(1.03);
     }
-    &__btn:hover{
-       transform: scale(1.03);
-       text-decoration: none;
-       background-color: #c7c7c7;
-       color: #000;
-    }
+    
   }
 
    
@@ -707,7 +690,7 @@ $titulo2:  'Source Sans Pro', sans-serif;
       transition: 1s;
     }            
     &__hr{
-      width: 70%;
+      width: 90%;
       background-color: #eee;
       height: 1px;
       align-self: center;
@@ -835,10 +818,7 @@ $titulo2:  'Source Sans Pro', sans-serif;
      &____info{
       font-size: 13px;
     }
-    &__btn{
-      width: 80%;
-     margin: 0px;
-    }
+    
     }
      
      
@@ -1006,10 +986,12 @@ $titulo2:  'Source Sans Pro', sans-serif;
      .footer__titulo{
        padding-left: 30px;
      }
-     .footer__h3 {
+     .footer__hr {
        width: 90%;
-       margin-left: 40px;
     
+    }
+    .footer__redes{
+      margin-left: 60px;
     }
     .footer__link{
       padding-left: 20px;
@@ -1076,27 +1058,24 @@ $titulo2:  'Source Sans Pro', sans-serif;
   /*---- seccion tres ------ */
 
   .noticias{
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
+    display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
-    height: 1600px;
+    height: 120rem;
     padding-left: 13px;
 
     &__tarjeta{
-      display: flex;
-      flex-direction: column;
-      width: 400px;
-      height: 450px;
-      padding: 20px;
-      margin: 30px;
-      border: 1px solid #fff;
+      width: 85%;
+      height: 31.25rem;
+      margin: 1.875rem;
     }
+    &__titu{
+      padding-left: 2rem;
+    }
+  }
     
 
-    &__btn{
-      padding-top: 5px;
-    }
+    
   }
 
   
@@ -1158,20 +1137,18 @@ $titulo2:  'Source Sans Pro', sans-serif;
   /*---- Discografia ----*/
   
   .disco{
-    display:grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 100px 100px;
-    height: 300px;
-      justify-content: start;
-    
-      &__titu{
-        grid-row:1;
-        position: absolute;
-        bottom: 570px;
-       }
-      &__fol{
-        grid-row:2;
-      }
+    display:flex;
+    flex-direction:column;
+    height: 20rem;
+    &__titu{
+      font-size:3rem;
+      align-self:start;
+    }
+    &__fol{
+      position: relative;
+      bottom: 3.125rem;
+    }
+
   }
   
   .cd{
@@ -1312,8 +1289,8 @@ $titulo2:  'Source Sans Pro', sans-serif;
     &__contenido{
       grid-area: contenido;
     }
-    &__hr{
-      margin-left: 50px;
+    &__contenido hr{
+      padding-left: 25px;
     }
     &__titulo{
       padding-left: 160px;
@@ -1324,27 +1301,24 @@ $titulo2:  'Source Sans Pro', sans-serif;
     &__redes{
       grid-area: redes;
       height: 170px;
-      padding-left: 30px;
     }
     &__titular{
       grid-area: diseñador;
     }
     &__parrafo{
-      padding-right: 80px;
+      padding: 0 40px;
+    }
+    &__link{
+      padding-left: 30px;
     }
     
-    &__link{
-      margin-left: 20px;
-    }
+    
   }
 
 
 
 
 
-
-  }
-  
  
  
  

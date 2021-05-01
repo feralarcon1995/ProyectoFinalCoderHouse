@@ -30,40 +30,40 @@ nav {
 .contenedor {
   background-image: url(../imagenes/img-1.jpg);
   background-size: cover;
-  height: 700px;
+  height: 743.75rem;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto;
   overflow: hidden;
-  margin-top: 40px; }
+  margin-top: 2.5rem; }
 
 .contenido {
   background-color: rgba(238, 238, 238, 0.89);
-  height: 200px;
+  height: 12.5rem;
   grid-column: 1/span 9;
   position: relative;
-  top: 300px;
-  right: 40px;
-  padding-left: 250px;
+  top: 18.75rem;
+  right: 2.5rem;
+  padding-left: 15.625rem;
   transition: 1s; }
   .contenido__index {
     font-family: "Bebas Neue", cursive;
-    font-size: 60px;
+    font-size: 3.75rem;
     color: #202020;
-    padding-left: 18px; }
+    padding-left: 1.125rem; }
   .contenido__parrafo {
     font-family: "Source Sans Pro", sans-serif;
     color: #1b1b1b;
     position: relative;
-    bottom: 25px; }
+    bottom: 1.563rem; }
   .contenido .contenido:hover {
     transform: scale(1.03); }
 
 /* --- seccion dos indexx ---- */
 .contenedorDos {
   background-color: #fff;
-  height: 500px; }
+  height: 31.25rem; }
 
 .tarjeta {
   display: grid;
@@ -71,38 +71,38 @@ nav {
   grid-template-rows: auto;
   grid-template-areas: "texto img";
   justify-content: center;
-  height: 400px;
+  height: 25rem;
   width: 100%;
   overflow: hidden;
   position: relative;
-  top: 70px; }
+  top: 4.375rem; }
   .tarjeta__img {
     grid-area: img;
     width: 100%;
-    height: 300px;
+    height: 18.75rem;
     align-self: center; }
   .tarjeta__contenido {
     color: #000;
     padding: 20px;
-    height: 300px;
+    height: 18.75rem;
     align-self: center; }
   .tarjeta__span {
     background-color: #222222;
-    width: 5px;
-    height: 30px;
+    width: 0.313rem;
+    height: 1.875rem;
     position: relative;
-    bottom: 45px;
-    left: 20px; }
+    bottom: 2.813rem;
+    left: 1.25rem; }
   .tarjeta__titulo {
     color: #000;
     font-family: "Bebas Neue", cursive;
-    font-size: 30px;
-    padding-left: 40px; }
+    font-size: 1.875rem;
+    padding-left: 2.5rem; }
   .tarjeta__parrafo {
     color: #444444;
-    font-size: 16px;
+    font-size: 1rem;
     position: relative;
-    bottom: 20px; }
+    bottom: 1.25rem; }
 
 /*----- secion tres index ------ */
 .noticias {
@@ -112,26 +112,26 @@ nav {
   grid-template-rows: auto;
   justify-content: space-evenly;
   align-content: center;
-  height: 600px;
-  padding-left: 40px; }
+  height: 37.5rem;
+  padding-left: 2.5rem; }
   .noticias__titular {
     font-family: "Bebas Neue", cursive;
     color: #fff;
     grid-row: 1;
-    font-size: 40px;
+    font-size: 2.5rem;
     align-self: center;
     align-items: center; }
   .noticias__hr {
     width: 80%;
     background-color: #fff;
-    height: 1px;
+    height: 0.063rem;
     grid-row: 1; }
   .noticias__tarjeta {
     grid-row: 2;
     background-color: #000000;
     width: 90%;
-    padding: 10px;
-    height: 460px;
+    padding: 0.625rem;
+    height: 28.75rem;
     transition: 1s;
     box-shadow: 1px 2px 5px 0px #4e4e4e;
     align-self: center; }
@@ -139,27 +139,10 @@ nav {
     width: 99%; }
   .noticias__info {
     font-family: "Source Sans Pro", sans-serif;
-    font-size: 14px;
+    font-size: 1rem;
     color: #ffffff; }
-  .noticias__btn {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    background-color: #303030;
-    margin-top: 5px;
-    margin-left: 160px;
-    border-radius: 4px;
-    padding: 10px;
-    width: 40%;
-    color: #fff;
-    transition: 1s; }
   .noticias__tarjeta:hover {
     transform: scale(1.03); }
-  .noticias__btn:hover {
-    transform: scale(1.03);
-    text-decoration: none;
-    background-color: #c7c7c7;
-    color: #000; }
 
 section {
   background-color: #192d8e;
@@ -179,7 +162,7 @@ section {
     font-size: 70px;
     text-align: center;
     margin: 0;
-    padding-top: 90px; }
+    padding-top: 5.625rem; }
 
 .integrante {
   background-color: #fff;
@@ -268,7 +251,7 @@ p {
     font-size: 70px;
     text-align: center;
     margin: 0;
-    padding-top: 90px;
+    padding-top: 5.625rem;
     position: relative;
     left: 100px;
     bottom: 100px; }
@@ -354,7 +337,7 @@ p {
     font-size: 70px;
     text-align: center;
     margin: 0;
-    padding-top: 90px;
+    padding-top: 5.625rem;
     padding-top: 90px; }
 
 .galeria {
@@ -514,7 +497,7 @@ p {
     padding-left: 30px;
     transition: 1s; }
   .footer__hr {
-    width: 70%;
+    width: 90%;
     background-color: #eee;
     height: 1px;
     align-self: center; }
@@ -601,9 +584,6 @@ p {
       width: 95%; }
     .noticias____info {
       font-size: 13px; }
-    .noticias__btn {
-      width: 80%;
-      margin: 0px; }
   /*----- Integrantes ----*/
   .inte__titulo {
     font-size: 50px; }
@@ -706,9 +686,10 @@ p {
   /*----- footer --- */
   .footer__titulo, .footer__redesTitulo {
     padding-left: 30px; }
-  .footer__h3 {
-    width: 90%;
-    margin-left: 40px; }
+  .footer__hr {
+    width: 90%; }
+  .footer__redes {
+    margin-left: 60px; }
   .footer__link {
     padding-left: 20px; }
   .footer__parrafo {
@@ -746,180 +727,188 @@ p {
       height: 100%; }
   /*---- seccion tres ------ */
   .noticias {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
+    display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
-    height: 1600px;
+    height: 120rem;
     padding-left: 13px; }
     .noticias__tarjeta {
-      display: flex;
-      flex-direction: column;
-      width: 400px;
-      height: 450px;
-      padding: 20px;
-      margin: 30px;
-      border: 1px solid #fff; }
-    .noticias__btn {
-      padding-top: 5px; }
-  /*---- Integrantes ---*/
-  .integrante {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
-    grid-template-areas: "img" "texto";
-    height: 710px; }
-    .integrante__imagen {
-      grid-area: img;
-      padding-left: 15px; }
-    .integrante____contenido {
-      grid-area: texto;
-      padding: 20px;
-      transition: 1s; }
-    .integrante__titulo {
-      font-size: 20px; }
-    .integrante__parrafo {
-      font-size: 17px; }
-  .integrante2 {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
-    grid-template-areas: "img2" "texto2";
-    height: 610px; }
-    .integrante2__imagen {
-      grid-area: img2;
-      padding-left: 15px; }
-    .integrante2____contenido {
-      grid-area: texto2;
-      padding: 20px;
-      transition: 1s; }
-    .integrante2__titulo {
-      font-size: 20px; }
-    .integrante2__parrafo {
-      font-size: 17px; }
-  /*---- Discografia ----*/
-  .disco {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 100px 100px;
-    height: 300px;
-    justify-content: start; }
-    .disco__titu {
-      grid-row: 1;
-      position: absolute;
-      bottom: 570px; }
-    .disco__fol {
-      grid-row: 2; }
-  .cd {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 300px 600px;
-    grid-template-areas: "texto" "links";
-    padding-bottom: 20px;
-    padding-left: 1px;
-    height: 900px; }
-    .cd__parrafo--padding {
-      font-size: 18px; }
-  .cd iframe {
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    width: 450px;
-    height: 170px;
-    padding-bottom: 10px;
+      width: 85%;
+      height: 31.25rem;
+      margin: 1.875rem; }
+    .noticias__titu {
+      padding-left: 2rem; } }
+
+/*---- Integrantes ---*/
+.integrante {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas: "img" "texto";
+  height: 710px; }
+  .integrante__imagen {
+    grid-area: img;
+    padding-left: 15px; }
+  .integrante____contenido {
+    grid-area: texto;
+    padding: 20px;
+    transition: 1s; }
+  .integrante__titulo {
+    font-size: 20px; }
+  .integrante__parrafo {
+    font-size: 17px; }
+
+.integrante2 {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas: "img2" "texto2";
+  height: 610px; }
+  .integrante2__imagen {
+    grid-area: img2;
+    padding-left: 15px; }
+  .integrante2____contenido {
+    grid-area: texto2;
+    padding: 20px;
+    transition: 1s; }
+  .integrante2__titulo {
+    font-size: 20px; }
+  .integrante2__parrafo {
+    font-size: 17px; }
+
+/*---- Discografia ----*/
+.disco {
+  display: flex;
+  flex-direction: column;
+  height: 20rem; }
+  .disco__titu {
+    font-size: 3rem;
+    align-self: start; }
+  .disco__fol {
     position: relative;
-    bottom: 100px;
-    right: 25px; }
-  .cd2 {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 300px 400px;
-    grid-template-areas: "texto2" "links2";
-    height: 900px; }
-    .cd2__histo2 {
-      font-size: 18px;
-      grid-area: texto2;
-      position: relative;
-      bottom: 100px; }
-    .cd2__album2 {
-      grid-area: links2; }
-  .cd2 iframe {
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    width: 450px;
-    height: 170px;
-    padding-bottom: 10px;
+    bottom: 3.125rem; }
+
+.cd {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 300px 600px;
+  grid-template-areas: "texto" "links";
+  padding-bottom: 20px;
+  padding-left: 1px;
+  height: 900px; }
+  .cd__parrafo--padding {
+    font-size: 18px; }
+
+.cd iframe {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 450px;
+  height: 170px;
+  padding-bottom: 10px;
+  position: relative;
+  bottom: 100px;
+  right: 25px; }
+
+.cd2 {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 300px 400px;
+  grid-template-areas: "texto2" "links2";
+  height: 900px; }
+  .cd2__histo2 {
+    font-size: 18px;
+    grid-area: texto2;
     position: relative;
-    right: 20px; }
-  .cd3 {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 300px 400px;
-    grid-template-areas: "texto3" "links3";
-    height: 1050px;
-    padding-left: 30px;
-    padding-bottom: 20px; }
-    .cd3__parrafo {
-      font-size: 18px; }
-  .cd3 iframe {
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    width: 450px;
-    height: 170px;
-    padding-bottom: 10px;
-    position: relative;
-    top: 150px;
-    right: 20px; }
-  .wide {
-    grid-column: span 1; }
-  /*------ Contacto ---*/
-  .contacto {
-    height: 1300px;
-    padding-right: 40px; }
-  .formCont {
-    width: 100%;
-    height: 1150px;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
-    grid-template-areas: "label1" "info1"; }
-  .cont {
-    grid-area: label1; }
-  .cont__user {
-    display: flex;
-    flex-direction: row;
-    font-size: 60px;
-    position: relative;
-    top: 70px;
-    right: 100px; }
-  .form {
-    grid-area: info1; }
-  /*----- footer ---*/
-  .footer {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
-    grid-template-areas: "contenido" "redes" "diseñador";
-    justify-content: center;
-    align-items: center;
-    align-content: center; }
-    .footer__contenido {
-      grid-area: contenido; }
-    .footer__hr {
-      margin-left: 50px; }
-    .footer__titulo, .footer__redesTitulo {
-      padding-left: 160px; }
-    .footer__redesTitulo {
-      padding-left: 90px; }
-    .footer__redes {
-      grid-area: redes;
-      height: 170px;
-      padding-left: 30px; }
-    .footer__titular {
-      grid-area: diseñador; }
-    .footer__parrafo {
-      padding-right: 80px; }
-    .footer__link {
-      margin-left: 20px; } }
+    bottom: 100px; }
+  .cd2__album2 {
+    grid-area: links2; }
+
+.cd2 iframe {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 450px;
+  height: 170px;
+  padding-bottom: 10px;
+  position: relative;
+  right: 20px; }
+
+.cd3 {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 300px 400px;
+  grid-template-areas: "texto3" "links3";
+  height: 1050px;
+  padding-left: 30px;
+  padding-bottom: 20px; }
+  .cd3__parrafo {
+    font-size: 18px; }
+
+.cd3 iframe {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 450px;
+  height: 170px;
+  padding-bottom: 10px;
+  position: relative;
+  top: 150px;
+  right: 20px; }
+
+.wide {
+  grid-column: span 1; }
+
+/*------ Contacto ---*/
+.contacto {
+  height: 1300px;
+  padding-right: 40px; }
+
+.formCont {
+  width: 100%;
+  height: 1150px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas: "label1" "info1"; }
+
+.cont {
+  grid-area: label1; }
+
+.cont__user {
+  display: flex;
+  flex-direction: row;
+  font-size: 60px;
+  position: relative;
+  top: 70px;
+  right: 100px; }
+
+.form {
+  grid-area: info1; }
+
+/*----- footer ---*/
+.footer {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas: "contenido" "redes" "diseñador";
+  justify-content: center;
+  align-items: center;
+  align-content: center; }
+  .footer__contenido {
+    grid-area: contenido; }
+  .footer__contenido hr {
+    padding-left: 25px; }
+  .footer__titulo, .footer__redesTitulo {
+    padding-left: 160px; }
+  .footer__redesTitulo {
+    padding-left: 90px; }
+  .footer__redes {
+    grid-area: redes;
+    height: 170px; }
+  .footer__titular {
+    grid-area: diseñador; }
+  .footer__parrafo {
+    padding: 0 40px; }
+  .footer__link {
+    padding-left: 30px; }
