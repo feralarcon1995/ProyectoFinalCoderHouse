@@ -109,17 +109,31 @@ nav {
   background-color: #222222;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
   justify-content: space-evenly;
   align-content: center;
-  height: 700px;
+  height: 600px;
   padding-left: 40px; }
+  .noticias__titular {
+    font-family: "Bebas Neue", cursive;
+    color: #fff;
+    grid-row: 1;
+    font-size: 40px;
+    align-self: center;
+    align-items: center; }
+  .noticias__hr {
+    width: 80%;
+    background-color: #fff;
+    height: 1px;
+    grid-row: 1; }
   .noticias__tarjeta {
+    grid-row: 2;
     background-color: #000000;
     width: 90%;
     padding: 10px;
     height: 460px;
     transition: 1s;
-    box-shadow: 0.5 0.5 0.5 3px #353535;
+    box-shadow: 1px 2px 5px 0px #4e4e4e;
     align-self: center; }
   .noticias__img {
     width: 99%; }
@@ -128,12 +142,15 @@ nav {
     font-size: 14px;
     color: #ffffff; }
   .noticias__btn {
-    justify-content: end;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
     background-color: #303030;
+    margin-top: 5px;
+    margin-left: 160px;
     border-radius: 4px;
-    padding: 10px 20px;
-    width: 60%;
-    height: 100px;
+    padding: 10px;
+    width: 40%;
     color: #fff;
     transition: 1s; }
   .noticias__tarjeta:hover {
@@ -505,27 +522,35 @@ p {
     font-family: "Bebas Neue", cursive;
     font-size: 25px;
     color: #fff;
-    align-self: center;
-    align-content: center;
     padding-top: 30px;
     padding-left: 170px; }
   .footer__redes {
     grid-area: redes;
-    font-size: 30px;
-    align-self: center; }
+    font-size: 30px; }
   .footer__redes i {
     color: #9c9c9c;
-    text-decoration: none;
-    align-self: center; }
+    text-decoration: none; }
   .footer__parrafo {
     color: #9c9c9c;
     font-size: 18px;
     padding: 0 80px; }
   .footer__titular {
     grid-area: diseñador;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     background-color: #272727;
     align-self: center;
     align-items: center; }
+  .footer__diseñador {
+    font-family: "Source Sans Pro", sans-serif;
+    color: #fff;
+    font-size: 15px; }
+  .footer__linke {
+    font-family: "Bebas Neue", cursive;
+    color: #c0c0c0;
+    text-decoration: none;
+    font-size: 19px; }
 
 /*------ media queries---------*/
 @media only screen and (max-width: 768px) {

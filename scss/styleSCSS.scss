@@ -146,23 +146,40 @@ $titulo2:  'Source Sans Pro', sans-serif;
   }
   
   /*----- secion tres index ------ */
+  
  .noticias{
     background-color: #222222;
     display:grid;
     grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto;
     justify-content: space-evenly;
     align-content: center;
-    height: 700px;
+    height: 600px;
     padding-left: 40px;
 
-
+   &__titular{
+     font-family: $titulo;
+     color: #fff;
+     grid-row: 1;
+     font-size: 40px;
+     align-self: center;
+     align-items: center;
+   }
+   &__hr{
+     width: 80%;
+     background-color: #fff;
+     height: 1px;
+     grid-row: 1;
+   }
+   
     &__tarjeta{
+      grid-row: 2;
       background-color: #000000;
       width: 90%;
       padding: 10px;
       height: 460px;
       transition: 1s;
-      box-shadow: 0.5 0.5 0.5 3px #353535;
+      box-shadow: 1px 2px 5px 0px rgb(78, 78, 78);
       align-self: center;
 
     }
@@ -176,12 +193,15 @@ $titulo2:  'Source Sans Pro', sans-serif;
       color: #ffffff;
     }
     &__btn{
-      justify-content: end;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
       background-color: #303030;
+      margin-top: 5px;
+      margin-left: 160px ;
       border-radius: 4px;
-      padding:10px 20px;
-      width: 60%;
-      height: 100px;
+      padding:10px;
+      width: 40%;
       color: #fff;
       transition: 1s;
     }
@@ -696,8 +716,7 @@ $titulo2:  'Source Sans Pro', sans-serif;
       font-family: $titulo;
       font-size: 25px;
       color: #fff;
-      align-self: center;
-      align-content: center;
+      
       padding-top:30px;
       padding-left: 170px;
     }
@@ -707,12 +726,10 @@ $titulo2:  'Source Sans Pro', sans-serif;
     &__redes{
       grid-area: redes;
       font-size: 30px;
-      align-self: center;
     }
     &__redes i{
       color: #9c9c9c;
       text-decoration: none;
-      align-self: center;
 
       
     }
@@ -724,9 +741,23 @@ $titulo2:  'Source Sans Pro', sans-serif;
     }
     &__titular{
       grid-area: diseñador;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
       background-color: #272727;
       align-self: center;
       align-items: center;
+    }
+    &__diseñador{
+      font-family: $titulo2;
+      color: #fff;
+      font-size: 15px;
+    }
+    &__linke {
+      font-family: $titulo;
+      color: #c0c0c0;
+      text-decoration: none;
+      font-size: 19px;
     }
    }
 
