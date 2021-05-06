@@ -44,199 +44,168 @@ $titulo2:  'Source Sans Pro', sans-serif;
   
   
   .main{
-    background: rgb(134,148,156);
-    background: linear-gradient(0deg, rgba(134,148,156,1) 0%, rgba(17,45,96,1) 100%);
-    background-size: cover;
+    background-color: #fff;
   }
   /* seccion uno index */
-  .contenedor{
-    background-image: url(../imagenes/img-1.jpg);
-    background-size: cover;
-    height: 37.5em;
-    width: 100%; 
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto;
-    overflow: hidden;
-    margin-top: 2.5em;
-    
-} 
+ .contenedorMain{
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   grid-template-rows: auto;
+   grid-template-areas: 'destacado destacado'
+                        'about     about'
+                       'noticias  noticias';
+   background: rgb(134,148,156);
+   background: linear-gradient(0deg, rgba(134,148,156,1) 0%, rgb(0, 0, 0) 100%);
+   background-size: cover;
 
-.contenido{
-  background-color: rgba(238, 238, 238, 0.89);
-  height: 12.5em;
-  grid-column: 1/span 9;
-  position: relative;
-  top: 18.75em;
-  right: 2.5em;
-  padding-left: 15.625em;
-  transition: 1s;
+ }
+ .contenidoUno{
+   grid-area: destacado;
+   background-image:url(../imagenes/img-1.jpg);
+   background-size: cover;
+   height: 35rem;
+   width: 100%;
+   margin-top: 1.875rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center ;
 
-  &__index{
-  font-family: $titulo;
-  font-size: 3.75em;
-  color:#202020;
-  padding-left: 1.125em;
-  }
-  &__parrafo{
-    font-family: $titulo2;
-  color: #1b1b1b;
-  position: relative;
-  bottom: 1.563rem;
-  }
-  .contenido:hover{
-    transform: scale(1.03);
-  }
-}
-
-
-  
-  
-  /* --- seccion dos indexx ---- */
-  
-  .contenedorDos{
-    background-color: #fff;
-    height:31.25em ;
-  }
-  
-  .tarjeta{
-      display: grid;
-      grid-template-columns: repeat(2,1fr);
-      grid-template-rows: auto;
-      grid-template-areas: "texto img";
-      justify-content: center;
-      height:25em;
-      width: 100%; 
-      overflow: hidden;
-      position: relative;
-      top: 4.375em;
+   &__titulo{
+     padding-top: 12.5rem;
+     font-family: $titulo;
+     font-size: 5rem;
+     align-self: center;
+     color: #fff;
+   }
+   &__subtitulo{
+     font-family: $titulo2;
+     font-size: 1.5rem;
+     align-self: center;
+     color: #fff;
+     padding: 1rem;
+   }
+   &__span{
+     font-size:2rem;
+     font-family: $titulo;
+   }
+ }
+ .contenidoDos{
+   grid-area:about ;
+   background-color: #eee;
+   height: 45rem;
+   width: 100%;
+   display:flex;
+   flex-direction:row;
+   flex-wrap: wrap;
+   padding: 2.5rem;
+   align-content: center;
+   align-items: center;
+   
+   
+   &__texto{
+     display: flex;
+     flex-direction: column;
+     width: 50%;
+   }
+   &__img{
+     width:36rem;
+     height: 100%;
+   }
+   &__titulo{
+     font-family:$titulo;
+     font-size: 2.5rem;
+     padding-left: 1.875rem;
+     color: #000;
+     text-decoration:underline #363636;
+   }
+   &__parrafo{
+     font-family:$titulo2;
+     font-size: 1.3rem;
+     color: #363636;
+     padding-top: 1.875rem;
      
-
-      &__img{
-        grid-area: img;
-        width:100%;
-        height: 18.75em;
-        align-self: center;          
-
-      }
-      &__contenido{
-          color: #000;
-          padding: 1.25em;
-          height: 18.75em;
-          align-self: center;          
-
-      }
-      &__span{
-        background-color:#222222;
-        width: 0.313em;
-        height: 1.875em;
-        position: relative;
-        bottom: 2.813em;
-        left:1.25em;
-      }
-      &__titulo{
-          color: #000;
-          font-family: $titulo;
-          font-size: 1.875em;
-          padding-left: 2.5em;
-      }
-      &__parrafo{
-          color: #444444;
-          font-size: 1em;
-          position: relative;
-          bottom:1.25em;
-      }
-  }
-  
-  /*----- secion tres index ------ */
-  
+   }
+ }
+ 
  .noticias{
-    background-color: #222222;
-    display:grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(3,auto);
-    justify-content: space-evenly;
-    grid-gap: 20px;
-    align-content: center;
-    height: 60em;
-    padding-left: 2.5em;
+   grid-area: noticias;
+   background-color: #383838;
+   display: flex;
+   flex-direction: column;
+   height: 70rem;
+   background-color: #424242;
+   background-image: url("../imagenes/Sun-Tornado.svg");
+   background-size: cover;
 
    &__titular{
-     font-family: $titulo;
-     color: #ffffff;
-     font-size: 2.5em;
-     align-self: center;
-     align-items: center;
-   }
-   &__hr{
-     width: 80%;
-     background-color: #fff;
-     height: 0.063em;
-     grid-row: 1;
-   }
-   
-    &__tarjeta{
-      display: flex;
-      flex-direction: row;
-      grid-column: 1/span 3;
-      background-color: #f3f3f3;
-      width: 90%;
-  
-      height: 15em;
-      transition: 1s;
-      box-shadow: 1px 2px 5px 0px rgb(78, 78, 78);
-      align-self: center;
-
-    }
-    &__contenido{
-      padding: 1.25em;
-	    width: 50%;
-    	display: flex;
-	    flex-direction: column;
-	    justify-content: space-between;
-	    width: 100%;
-      padding:0.625em;
-    }
-    &__img{
-      width:80%;
-      height: 100%;
-      
-    }
-    &__info{
-      font-family:$titulo2;
-      font-size: 1em;
-      color: #000000;
-    }
-    &__btn{
-      color: #fff;
-	    cursor: pointer;
-     	display: inline-block;
-	    padding: 0.625em; 
-    	background-color: #000000;
-    	font-size: 1em; 
-    	text-transform: uppercase;
-    	letter-spacing: 1px;
-	    align-self: flex-end;
-	    transition: 1s;
-    }
-    &__btn:hover{
-      transform: scale(1.04);
-      text-decoration: none;
-      color: #000;
-      background-color: #fff;
-      border: 1px solid #000;
-
-    }
-    &__tarjeta:hover{
-      transform: scale(1.03);
-    }
+    height: 9rem;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
     
+   }
+
+   &__h2{
+     font-family: $titulo;
+     font-size: 3rem;
+   }
+   &__contenido{
+    width: 90%;
+    background-color: #e9e9e9;
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    box-shadow: 4px 4px 7px -1px rgba(145,145,145,0.75);
+    -webkit-box-shadow: 4px 4px 7px -1px rgba(145,145,145,0.75);
+    -moz-box-shadow: 4px 4px 7px -1px rgba(145,145,145,0.75);
+    transition: 1s;
+   }
+
+   &__img{
+     width: 100%;
+     height: 100%;
+   }
+   &__titulo{
+     font-family: $titulo;
+     color: #000;
+     padding-left:1.25rem;
+   }
+  &__info{
+    font-family: $titulo2;
+    color: #4b4b4b;
   }
-
-   
-
-  
-  
+  &__texto{
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+  }
+  &__btn{
+    color: #fff;
+    cursor: pointer;
+     display: inline-block;
+    padding: 0.625em; 
+    background-color: #000000;
+    font-size: 1em; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    align-self: flex-end;
+    transition: 1s;
+  }
+  &__btn:hover{
+    transform: scale(1.04);
+    background-color: #5e5e5e ;
+    text-decoration: none;
+    color: #fff;
+  }
+  &__contenido:hover{
+    transform:scale(1.04);
+  }
+ }
   
   section{
     background-color: #192d8e;
@@ -359,139 +328,78 @@ $titulo2:  'Source Sans Pro', sans-serif;
   /* ------ Discografia Css Grid---- */
   .disco{
      display: flex;
-     flex-direction: row;
-     align-items: flex-start;
+     align-content: center;
+     align-items: center;
+     justify-content: center;
      height: 12.5em;
      
-     &__titu {
+     &__titulo {
        font-family: $titulo;
        font-size: 3.75em;
-       align-self: flex-end;
-       padding-left: 3.75em;
-       padding-bottom: 2rem;
+       align-self: center;
+       padding-top: 3.75rem;
 
      }
      
   }
-  .mainIndex{
-    background: rgb(0,0,0);
-    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(74,74,74,1) 62%, rgba(161,161,161,1) 100%); 
-  }
-  .discografia{
-    width: 95%;
+  .mainDiscografia{
+    background-image: url(../imagenes/Sun-Tornado.svg);
+    background-size: cover;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(4,auto);
-    grid-template-areas: 'disco1 disco1  disco2 disco2'
-                         'disco3 disco3  disco4 disco4'
-                         'disco5 disco5  disco5 disco5'
-                         'disco6 disco6  disco7 disco7';
-    grid-gap: 10px; 
-    padding-left: 5em;
-    padding-bottom: 3em;
-   
-    
-
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 'titulo'
+                         'discografia';
   }
-  .discoUno{
-    grid-area:disco1;
+
+  .discografia{
+    grid-area: discografia;
+    display: flex;
+    flex-direction: column;
+    
+    &__contenido{
+      width: 90%;
+    background-color: #f1f1f1;
     display: flex;
     flex-direction: row;
-    background-color: #1b1b1b;
-  
-  }
-  .discoUno iframe{
-    grid-area: iframe1;
-    width: 15em;
-    height: 100%;
-  
-}
-  .discoDos{
-    grid-area:disco2;
-    display: flex;
-    flex-direction: row;
-    background-color: #e9e9e9;
-    
-  }
-  .discoDos iframe{
-      grid-area: iframe2;
-      width: 15em;
-      height: 100%;
-    
-  }
-  .discoTres{
-    grid-area:disco3;
-    @extend .discoUno;
-
-    &__iframe{
-      grid-area: iframe3;
-      width: 15em;
-      height: 100%;
+    margin: 1rem;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    box-shadow: 4px 4px 7px -1px rgba(145,145,145,0.75);
+    -webkit-box-shadow: 4px 4px 7px -1px rgba(145,145,145,0.75);
+    -moz-box-shadow: 4px 4px 7px -1px rgba(145,145,145,0.75);
+    transition: 1s;
     }
-  }
-  .discoCuatro{
-    grid-area:disco4;
-    @extend .discoDos;
 
-    &__iframe{
-      grid-area: iframe4;
-      width: 15em;
-      height: 100%;
+    &__titulo{
+      font-family: $titulo;
+      color: #000;
+      padding-left:1.25rem;
     }
-  }
-  .discoCinco{
-    grid-area:disco5;
-    @extend .discoUno;
-
-    &__iframe{
-      grid-area: iframe5;
-      width: 60em;
-      height: 100%;
-    }
-  }
-  .discoSeis{
-    grid-area:disco6;
-    @extend .discoDos;
-
-    &__iframe{
-      grid-area: iframe6;
-      width: 15em;
-      height: 100%;
-    }
-  }
-  .discoSiete{
-    grid-area:disco7;
-    @extend .discoUno;
-
-    &__iframe{
-      grid-area: iframe7;
-      width: 15em;
-      height: 100%;
-    }
-  }
-
-  .disco__titulo{
-    font-family: $titulo;
-    padding-left: 20px;
-    padding-top: 15px;
-  }
-  .disco__titulo1{
-    font-family: $titulo;
-    padding-left: 20px;
-    padding-top: 15px;
-    color: #000;
-  }
-  .disco__parrafo{
+   &__info{
+     font-family: $titulo2;
+     color: #4b4b4b;
+   }
+   &__time{
     font-family: $titulo2;
-    padding-left: 20px;
-    padding-top: 15px;
+    color: #4b4b4b;
+   }
+   &__texto{
+     padding: 2rem;
+     display: flex;
+     flex-direction: column;
+   }
+   &__iframe{
+     width: 20rem;
+     height: 100%;
+   }
+
+   &__contenido:hover{
+     transform:scale(1.04);
+   }
   }
-  .disco__parrafo1{
-    font-family: $titulo2;
-    padding-left: 20px;
-    padding-top: 15px;
-    color: #474747;
-  }
+  
    /*--- ------ final de discografia ---- */
   
    /*----- Galeria -----*/
@@ -829,63 +737,45 @@ $titulo2:  'Source Sans Pro', sans-serif;
      .main{
         width: 100%;
       }
-     .contenedor{
-       
-       display: grid;
-       grid-template-columns: repeat(8,1fr);
-       grid-template-rows: auto;
-       
-     }
      
-     
-     .contenido{
-       grid-column: 1/span 8;
-       grid-row: 1;
-       height: 15.625em;
-      
+     .contenidoUno__subtitulo{
+       background-color: rgba(0, 0, 0, 0.514);
      }
-     .contenedorDos{
-       height: 38em;
-     }
-     .tarjeta{
-       display: grid;
-       grid-template-columns: 50% 50%;
-       grid-template-rows: auto;
-       grid-template-areas: "texto img";
-       height: 37.5em;
-       position: absolute;
-       top: 550px;
-      
+     .contenidoDos{
        
-       &__img {
-         grid-area: img;
-         align-self: center; 
-         padding-top: 100px;
-       
+      display: flex;
+      flex-direction: row;
+      height: 61rem;
+
+       &__texto{
+         width: 100%;
+         font-size: 2rem;
+         
        }
-       &__parrafo{
-         font-size: 15px;
+       &__tiulo{
+         padding-top: 10px;
+       }
+       &__img{
+         width: 100%;
+         height: 30rem;
        }
      }
-   
      .noticias{
-      padding-left: 15px;
-      height: 65em;
-      &__tarjeta{
-        padding: 0px;
-        width: 95%;
-        height: 19em;
+       height: 78rem;
+
+       &__titulo{
+        font-size: 1.5rem;
       }
-  
-     &____info{
-      font-size:0.9375rem;
-    }
-    
-    }
-     
-     
-     
-     
+      &__info{
+        font-size: 1rem;
+       }
+       &__img{
+        width: 18.75rem;
+        height: 100%;
+      }
+     }
+
+   
      /*----- Integrantes ----*/
     .inte__titulo{
       font-size: 50px;
@@ -935,19 +825,17 @@ $titulo2:  'Source Sans Pro', sans-serif;
     
     }
      /*---- Discografia ----*/
-     .discografia{
-       grid-template-columns: repeat(2,1fr);
-       grid-template-rows: repeat(7,auto);
-       grid-template-areas: 'disco1 disco1'
-                            'disco2 disco2'
-                            'disco3 disco3'
-                            'disco4 disco4'
-                            'disco5 disco5'
-                            'disco6 disco6'
-                            'disco7 disco7';
-     padding-left: 3em;
+     .mainDiscografia{
+       height: auto;
      }
-     
+     .discografia{
+       
+       &__iframe{
+        width: 20rem;
+        height: 100%;
+      }
+   
+     }
     
      /*------ Contacto ---*/
      .contacto{
@@ -1013,61 +901,38 @@ $titulo2:  'Source Sans Pro', sans-serif;
 }
 
 /*----- index ------*/
-.contenedor{
-  width: 100%;
-  height: 600px;
- }
- .contenido{
-  padding-left: 50px;
-  padding-top: 10px;
-  height: 150px;
- }
-  .contenido__index{
-    font-size: 25px;
-  }
-  .contenido__parrafo{
-    font-size: 15px;
-  }
-/*----- index dos------*/
-.contenedorDos{
-  width: 100%;
-  height: 650px;
-
- }
-    
- .tarjeta{
+.contenidoUno__titulo{
+  font-size:5rem;
+}
+.contenidoUno__subtitulo{
+  font-size: 2rem;
   display: flex;
-  flex-direction: column-reverse;
-  height: 700px;
-  padding-top: 100px;
- }
- 
-   
- 
- /*---- seccion tres ------ */
+  flex-direction: column; 
+}
+.contenidoUno__span{
+  font-size: 2rem;
 
+}
+
+.contenidoDos{
+  height: 80rem;
+  padding: 10px;
+  &__texto{
+    font-size: 1rem;
+  }
+}
 .noticias{
-  display:grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(3,auto);
-  height: 128em;
+  height: 120rem;
 
-  &__tarjeta{
-    display: flex;
-    flex-direction:column;
-    padding-top: 30px;
-    width: 85%;
-    height: 33em;
-    margin: 1.875rem;
+  &__contenido{
+    display:flex;
+    flex-direction: column;
   }
   &__img{
     width: 100%;
-  }
-  &__titu{
-    padding-left: 2rem;
+    height: 100%;
   }
 }
-
 /*---- Integrantes ---*/
 .integrante {
   display: grid;
@@ -1124,49 +989,19 @@ $titulo2:  'Source Sans Pro', sans-serif;
 }
 /*---- Discografia ----*/
 
-.disco__titu{
-  font-size: 1.875em;
-  }
-  .discoUno__iframe{
-    width: 10em;
-      height: 100%;
-  }
-  
-  .discoDos__iframe{
-    width: 10em;
-      height: 100%;
+.mainDiscografia{
+  height: auto;
+}
+.disco__titulo{
+  font-size: 3.5rem;
   }
   
-  .discoTres__iframe{
-    width: 10em;
-      height: 100%;
+  .discografia__contenido{
+    display: flex;
+    flex-direction: column-reverse;
   }
-  
-  .discoCuatro__iframe{
-    width: 10em;
-      height: 100%;
-  }
-  
-  .discoCinco__iframe{
-    width: 10em;
-      height: 100%;
-  }
-  
-  .discoSeis__iframe{
-    width: 10em;
-      height: 100%;
-  }
-  
-  .discoSiete__iframe{
-    width: 10em;
-      height: 100%;
-  }
-  
-  .disco__titulo1, .disco__titulo{
-    font-size: 1em;
-  }
-  .disco__parrafo1, .disco__parrafo{
-    font-size: 0.875em;
+  .discografia__iframe{
+    width: 100%;
   }
   /**--------Fin Discografia---------------**/
 .wide{

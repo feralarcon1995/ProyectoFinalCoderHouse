@@ -25,135 +25,120 @@ nav {
 
 /*------ Body ------*/
 .main {
-  background: #86949c;
-  background: linear-gradient(0deg, #86949c 0%, #112d60 100%);
-  background-size: cover; }
+  background-color: #fff; }
 
 /* seccion uno index */
-.contenedor {
+.contenedorMain {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: 'destacado destacado' 'about     about' 'noticias  noticias';
+  background: #86949c;
+  background: linear-gradient(0deg, #86949c 0%, black 100%);
+  background-size: cover; }
+
+.contenidoUno {
+  grid-area: destacado;
   background-image: url(../imagenes/img-1.jpg);
   background-size: cover;
-  height: 37.5em;
+  height: 35rem;
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto;
-  overflow: hidden;
-  margin-top: 2.5em; }
-
-.contenido {
-  background-color: rgba(238, 238, 238, 0.89);
-  height: 12.5em;
-  grid-column: 1/span 9;
-  position: relative;
-  top: 18.75em;
-  right: 2.5em;
-  padding-left: 15.625em;
-  transition: 1s; }
-  .contenido__index {
-    font-family: "Bebas Neue", cursive;
-    font-size: 3.75em;
-    color: #202020;
-    padding-left: 1.125em; }
-  .contenido__parrafo {
-    font-family: "Source Sans Pro", sans-serif;
-    color: #1b1b1b;
-    position: relative;
-    bottom: 1.563rem; }
-  .contenido .contenido:hover {
-    transform: scale(1.03); }
-
-/* --- seccion dos indexx ---- */
-.contenedorDos {
-  background-color: #fff;
-  height: 31.25em; }
-
-.tarjeta {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto;
-  grid-template-areas: "texto img";
+  margin-top: 1.875rem;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  height: 25em;
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  top: 4.375em; }
-  .tarjeta__img {
-    grid-area: img;
-    width: 100%;
-    height: 18.75em;
-    align-self: center; }
-  .tarjeta__contenido {
-    color: #000;
-    padding: 1.25em;
-    height: 18.75em;
-    align-self: center; }
-  .tarjeta__span {
-    background-color: #222222;
-    width: 0.313em;
-    height: 1.875em;
-    position: relative;
-    bottom: 2.813em;
-    left: 1.25em; }
-  .tarjeta__titulo {
-    color: #000;
+  align-items: center; }
+  .contenidoUno__titulo {
+    padding-top: 12.5rem;
     font-family: "Bebas Neue", cursive;
-    font-size: 1.875em;
-    padding-left: 2.5em; }
-  .tarjeta__parrafo {
-    color: #444444;
-    font-size: 1em;
-    position: relative;
-    bottom: 1.25em; }
-
-/*----- secion tres index ------ */
-.noticias {
-  background-color: #222222;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, auto);
-  justify-content: space-evenly;
-  grid-gap: 20px;
-  align-content: center;
-  height: 60em;
-  padding-left: 2.5em; }
-  .noticias__titular {
-    font-family: "Bebas Neue", cursive;
-    color: #ffffff;
-    font-size: 2.5em;
+    font-size: 5rem;
     align-self: center;
-    align-items: center; }
-  .noticias__hr {
-    width: 80%;
-    background-color: #fff;
-    height: 0.063em;
-    grid-row: 1; }
-  .noticias__tarjeta {
-    display: flex;
-    flex-direction: row;
-    grid-column: 1/span 3;
-    background-color: #f3f3f3;
-    width: 90%;
-    height: 15em;
-    transition: 1s;
-    box-shadow: 1px 2px 5px 0px #4e4e4e;
-    align-self: center; }
-  .noticias__contenido {
-    padding: 1.25em;
-    width: 50%;
+    color: #fff; }
+  .contenidoUno__subtitulo {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1.5rem;
+    align-self: center;
+    color: #fff;
+    padding: 1rem; }
+  .contenidoUno__span {
+    font-size: 2rem;
+    font-family: "Bebas Neue", cursive; }
+
+.contenidoDos {
+  grid-area: about;
+  background-color: #eee;
+  height: 45rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 2.5rem;
+  align-content: center;
+  align-items: center; }
+  .contenidoDos__texto {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0.625em; }
-  .noticias__img {
-    width: 80%;
+    width: 50%; }
+  .contenidoDos__img {
+    width: 36rem;
     height: 100%; }
+  .contenidoDos__titulo {
+    font-family: "Bebas Neue", cursive;
+    font-size: 2.5rem;
+    padding-left: 1.875rem;
+    color: #000;
+    text-decoration: underline #363636; }
+  .contenidoDos__parrafo {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1.3rem;
+    color: #363636;
+    padding-top: 1.875rem; }
+
+.noticias {
+  grid-area: noticias;
+  background-color: #383838;
+  display: flex;
+  flex-direction: column;
+  height: 70rem;
+  background-color: #424242;
+  background-image: url("../imagenes/Sun-Tornado.svg");
+  background-size: cover; }
+  .noticias__titular {
+    height: 9rem;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center; }
+  .noticias__h2 {
+    font-family: "Bebas Neue", cursive;
+    font-size: 3rem; }
+  .noticias__contenido {
+    width: 90%;
+    background-color: #e9e9e9;
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    box-shadow: 4px 4px 7px -1px rgba(145, 145, 145, 0.75);
+    -webkit-box-shadow: 4px 4px 7px -1px rgba(145, 145, 145, 0.75);
+    -moz-box-shadow: 4px 4px 7px -1px rgba(145, 145, 145, 0.75);
+    transition: 1s; }
+  .noticias__img {
+    width: 100%;
+    height: 100%; }
+  .noticias__titulo {
+    font-family: "Bebas Neue", cursive;
+    color: #000;
+    padding-left: 1.25rem; }
   .noticias__info {
     font-family: "Source Sans Pro", sans-serif;
-    font-size: 1em;
-    color: #000000; }
+    color: #4b4b4b; }
+  .noticias__texto {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column; }
   .noticias__btn {
     color: #fff;
     cursor: pointer;
@@ -167,12 +152,11 @@ nav {
     transition: 1s; }
   .noticias__btn:hover {
     transform: scale(1.04);
+    background-color: #5e5e5e;
     text-decoration: none;
-    color: #000;
-    background-color: #fff;
-    border: 1px solid #000; }
-  .noticias__tarjeta:hover {
-    transform: scale(1.03); }
+    color: #fff; }
+  .noticias__contenido:hover {
+    transform: scale(1.04); }
 
 section {
   background-color: #192d8e;
@@ -269,108 +253,60 @@ p {
 /* ------ Discografia Css Grid---- */
 .disco {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
   height: 12.5em; }
-  .disco__titu {
+  .disco__titulo {
     font-family: "Bebas Neue", cursive;
     font-size: 3.75em;
-    align-self: flex-end;
-    padding-left: 3.75em;
-    padding-bottom: 2rem; }
+    align-self: center;
+    padding-top: 3.75rem; }
 
-.mainIndex {
-  background: black;
-  background: linear-gradient(180deg, black 0%, #4a4a4a 62%, #a1a1a1 100%); }
+.mainDiscografia {
+  background-image: url(../imagenes/Sun-Tornado.svg);
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 'titulo' 'discografia'; }
 
 .discografia {
-  width: 95%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, auto);
-  grid-template-areas: 'disco1 disco1  disco2 disco2' 'disco3 disco3  disco4 disco4' 'disco5 disco5  disco5 disco5' 'disco6 disco6  disco7 disco7';
-  grid-gap: 10px;
-  padding-left: 5em;
-  padding-bottom: 3em; }
-
-.discoUno, .discoTres, .discoCinco, .discoSiete {
-  grid-area: disco1;
+  grid-area: discografia;
   display: flex;
-  flex-direction: row;
-  background-color: #1b1b1b; }
-
-.discoUno iframe, .discoTres iframe, .discoCinco iframe, .discoSiete iframe {
-  grid-area: iframe1;
-  width: 15em;
-  height: 100%; }
-
-.discoDos, .discoCuatro, .discoSeis {
-  grid-area: disco2;
-  display: flex;
-  flex-direction: row;
-  background-color: #e9e9e9; }
-
-.discoDos iframe, .discoCuatro iframe, .discoSeis iframe {
-  grid-area: iframe2;
-  width: 15em;
-  height: 100%; }
-
-.discoTres {
-  grid-area: disco3; }
-  .discoTres__iframe {
-    grid-area: iframe3;
-    width: 15em;
+  flex-direction: column; }
+  .discografia__contenido {
+    width: 90%;
+    background-color: #f1f1f1;
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    box-shadow: 4px 4px 7px -1px rgba(145, 145, 145, 0.75);
+    -webkit-box-shadow: 4px 4px 7px -1px rgba(145, 145, 145, 0.75);
+    -moz-box-shadow: 4px 4px 7px -1px rgba(145, 145, 145, 0.75);
+    transition: 1s; }
+  .discografia__titulo {
+    font-family: "Bebas Neue", cursive;
+    color: #000;
+    padding-left: 1.25rem; }
+  .discografia__info {
+    font-family: "Source Sans Pro", sans-serif;
+    color: #4b4b4b; }
+  .discografia__time {
+    font-family: "Source Sans Pro", sans-serif;
+    color: #4b4b4b; }
+  .discografia__texto {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column; }
+  .discografia__iframe {
+    width: 20rem;
     height: 100%; }
-
-.discoCuatro {
-  grid-area: disco4; }
-  .discoCuatro__iframe {
-    grid-area: iframe4;
-    width: 15em;
-    height: 100%; }
-
-.discoCinco {
-  grid-area: disco5; }
-  .discoCinco__iframe {
-    grid-area: iframe5;
-    width: 60em;
-    height: 100%; }
-
-.discoSeis {
-  grid-area: disco6; }
-  .discoSeis__iframe {
-    grid-area: iframe6;
-    width: 15em;
-    height: 100%; }
-
-.discoSiete {
-  grid-area: disco7; }
-  .discoSiete__iframe {
-    grid-area: iframe7;
-    width: 15em;
-    height: 100%; }
-
-.disco__titulo {
-  font-family: "Bebas Neue", cursive;
-  padding-left: 20px;
-  padding-top: 15px; }
-
-.disco__titulo1 {
-  font-family: "Bebas Neue", cursive;
-  padding-left: 20px;
-  padding-top: 15px;
-  color: #000; }
-
-.disco__parrafo {
-  font-family: "Source Sans Pro", sans-serif;
-  padding-left: 20px;
-  padding-top: 15px; }
-
-.disco__parrafo1 {
-  font-family: "Source Sans Pro", sans-serif;
-  padding-left: 20px;
-  padding-top: 15px;
-  color: #474747; }
+  .discografia__contenido:hover {
+    transform: scale(1.04); }
 
 /*--- ------ final de discografia ---- */
 /*----- Galeria -----*/
@@ -602,39 +538,29 @@ p {
 @media only screen and (max-width: 768px) {
   .main {
     width: 100%; }
-  .contenedor {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: auto; }
-  .contenido {
-    grid-column: 1/span 8;
-    grid-row: 1;
-    height: 15.625em; }
-  .contenedorDos {
-    height: 38em; }
-  .tarjeta {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: auto;
-    grid-template-areas: "texto img";
-    height: 37.5em;
-    position: absolute;
-    top: 550px; }
-    .tarjeta__img {
-      grid-area: img;
-      align-self: center;
-      padding-top: 100px; }
-    .tarjeta__parrafo {
-      font-size: 15px; }
+  .contenidoUno__subtitulo {
+    background-color: rgba(0, 0, 0, 0.514); }
+  .contenidoDos {
+    display: flex;
+    flex-direction: row;
+    height: 61rem; }
+    .contenidoDos__texto {
+      width: 100%;
+      font-size: 2rem; }
+    .contenidoDos__tiulo {
+      padding-top: 10px; }
+    .contenidoDos__img {
+      width: 100%;
+      height: 30rem; }
   .noticias {
-    padding-left: 15px;
-    height: 65em; }
-    .noticias__tarjeta {
-      padding: 0px;
-      width: 95%;
-      height: 19em; }
-    .noticias____info {
-      font-size: 0.9375rem; }
+    height: 78rem; }
+    .noticias__titulo {
+      font-size: 1.5rem; }
+    .noticias__info {
+      font-size: 1rem; }
+    .noticias__img {
+      width: 18.75rem;
+      height: 100%; }
   /*----- Integrantes ----*/
   .inte__titulo {
     font-size: 50px; }
@@ -664,11 +590,11 @@ p {
     .integrante2__parrafo {
       font-size: 16px; }
   /*---- Discografia ----*/
-  .discografia {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(7, auto);
-    grid-template-areas: 'disco1 disco1' 'disco2 disco2' 'disco3 disco3' 'disco4 disco4' 'disco5 disco5' 'disco6 disco6' 'disco7 disco7';
-    padding-left: 3em; }
+  .mainDiscografia {
+    height: auto; }
+  .discografia__iframe {
+    width: 20rem;
+    height: 100%; }
   /*------ Contacto ---*/
   .contacto {
     padding-left: 40px; }
@@ -705,43 +631,27 @@ p {
   .social {
     letter-spacing: 8px; }
   /*----- index ------*/
-  .contenedor {
-    width: 100%;
-    height: 600px; }
-  .contenido {
-    padding-left: 50px;
-    padding-top: 10px;
-    height: 150px; }
-  .contenido__index {
-    font-size: 25px; }
-  .contenido__parrafo {
-    font-size: 15px; }
-  /*----- index dos------*/
-  .contenedorDos {
-    width: 100%;
-    height: 650px; }
-  .tarjeta {
+  .contenidoUno__titulo {
+    font-size: 5rem; }
+  .contenidoUno__subtitulo {
+    font-size: 2rem;
     display: flex;
-    flex-direction: column-reverse;
-    height: 700px;
-    padding-top: 100px; }
-  /*---- seccion tres ------ */
+    flex-direction: column; }
+  .contenidoUno__span {
+    font-size: 2rem; }
+  .contenidoDos {
+    height: 80rem;
+    padding: 10px; }
+    .contenidoDos__texto {
+      font-size: 1rem; }
   .noticias {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, auto);
-    height: 128em; }
-    .noticias__tarjeta {
+    height: 120rem; }
+    .noticias__contenido {
       display: flex;
-      flex-direction: column;
-      padding-top: 30px;
-      width: 85%;
-      height: 33em;
-      margin: 1.875rem; }
+      flex-direction: column; }
     .noticias__img {
-      width: 100%; }
-    .noticias__titu {
-      padding-left: 2rem; }
+      width: 100%;
+      height: 100%; }
   /*---- Integrantes ---*/
   .integrante {
     display: grid;
@@ -778,33 +688,15 @@ p {
     .integrante2__parrafo {
       font-size: 17px; }
   /*---- Discografia ----*/
-  .disco__titu {
-    font-size: 1.875em; }
-  .discoUno__iframe {
-    width: 10em;
-    height: 100%; }
-  .discoDos__iframe {
-    width: 10em;
-    height: 100%; }
-  .discoTres__iframe {
-    width: 10em;
-    height: 100%; }
-  .discoCuatro__iframe {
-    width: 10em;
-    height: 100%; }
-  .discoCinco__iframe {
-    width: 10em;
-    height: 100%; }
-  .discoSeis__iframe {
-    width: 10em;
-    height: 100%; }
-  .discoSiete__iframe {
-    width: 10em;
-    height: 100%; }
-  .disco__titulo1, .disco__titulo {
-    font-size: 1em; }
-  .disco__parrafo1, .disco__parrafo {
-    font-size: 0.875em; }
+  .mainDiscografia {
+    height: auto; }
+  .disco__titulo {
+    font-size: 3.5rem; }
+  .discografia__contenido {
+    display: flex;
+    flex-direction: column-reverse; }
+  .discografia__iframe {
+    width: 100%; }
   /**--------Fin Discografia---------------**/
   .wide {
     grid-column: span 1; }
