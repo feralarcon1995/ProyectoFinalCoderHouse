@@ -61,16 +61,20 @@ $titulo2:  'Source Sans Pro', sans-serif;
  }
  .contenidoUno{
    grid-area: destacado;
-   background-image:url(../imagenes/img-1.jpg);
+   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0,0,0,0.905)), url(../imagenes/img-1.jpg);
    background-size: cover;
    height: 35rem;
    width: 100%;
-   margin-top: 1.875rem;
+   margin-top: 1.5rem;
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center ;
-
+   &__hr{
+     width: 70%;
+     height: 1px;
+     background-color: #fff;
+   }
    &__titulo{
      padding-top: 12.5rem;
      font-family: $titulo;
@@ -92,8 +96,9 @@ $titulo2:  'Source Sans Pro', sans-serif;
  }
  .contenidoDos{
    grid-area:about ;
-   background-color: #eee;
-   height: 45rem;
+   background-image: url(../imagenes/blob-scene-haikei.svg);
+   background-size: cover;
+   height:auto;
    width: 100%;
    display:flex;
    flex-direction:row;
@@ -104,24 +109,34 @@ $titulo2:  'Source Sans Pro', sans-serif;
    
    
    &__texto{
-     display: flex;
-     flex-direction: column;
-     width: 50%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
    }
    &__img{
-     width:36rem;
-     height: 100%;
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+   }
+   &__hr{
+     width: 60%;
+     height: 1px;
+     background-color: #4d4d4d;
+     margin-left: 5px;
    }
    &__titulo{
      font-family:$titulo;
      font-size: 2.5rem;
      padding-left: 1.875rem;
      color: #000;
-     text-decoration:underline #363636;
    }
    &__parrafo{
      font-family:$titulo2;
-     font-size: 1.3rem;
+     font-size: 1.2rem;
      color: #363636;
      padding-top: 1.875rem;
      
@@ -209,7 +224,7 @@ $titulo2:  'Source Sans Pro', sans-serif;
   
   section{
     background-color: #192d8e;
-  background-image: url(../imagenes/fondo.jpg);
+  background-image: url(../imagenes/blob-scene-haikei2.svg);
   background-size: cover;
       margin: 0;
   }
@@ -407,19 +422,19 @@ $titulo2:  'Source Sans Pro', sans-serif;
    .gale{
     background-image: url(../imagenes/fondo.jpg);
     background-size:cover;
-    height: 12.5em;
+    height: 12rem;
     width: 100%;
 
     &__titulo{
       @include estiloTitulos(4.375em,#fff);
-      padding-top: 5.625em;
+     
     }
    }
   .galeria{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-auto-rows: minmax(250px, auto);
-    gap: 10px;
+    gap: 15px;
     padding: 10px;
     grid-auto-flow: dense;
 
@@ -427,17 +442,18 @@ $titulo2:  'Source Sans Pro', sans-serif;
       display: flex;
       align-items: center;
       justify-content: center;
-      background-image: url(../imagenes/galeria1.jpg);
+      background-image: url(../imagenes/galeria4.jpg);
       align-content: center;
       border-radius: 2px;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      transition: 1s;
    
     }
     &__item-2{
       @extend .galeria__item-1;
-      background-image: url(../imagenes/galeria11.jpg);
+      background-image: url(../imagenes/galeria2.jpg);
       
     }
 
@@ -449,7 +465,7 @@ $titulo2:  'Source Sans Pro', sans-serif;
     
     &__item-4{
       @extend .galeria__item-1;
-      background-image: url(../imagenes/galeria4.jpg);
+      background-image: url(../imagenes/galeria14.jpg);
      
     }
 
@@ -500,7 +516,7 @@ $titulo2:  'Source Sans Pro', sans-serif;
     transition: 1s;
   }
   .galeria div:hover{
-    transform: scale(1.04);
+    transform: scale(1.05);
     box-shadow: 3px 3px 3px #838383;
   
   }
@@ -1042,40 +1058,46 @@ $titulo2:  'Source Sans Pro', sans-serif;
 }
 /*----- footer ---*/
 .footer{
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: auto;
-  grid-template-areas: "contenido"
-                       "redes"
-                       "diseñador";
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   align-content: center;
+  margin: 0px;
+  padding: 0px;
 
   &__contenido{
-    grid-area: contenido;
+  grid-area: contenido; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+    
   }
   &__contenido hr{
     padding-left: 25px;
   }
   &__titulo{
-    padding-left: 160px;
+    align-self: center;
   }
   &__redesTitulo{
-    padding-left: 90px;
+    align-self: center;
   }
   &__redes{
     grid-area: redes;
     height: 170px;
+    
   }
   &__titular{
     grid-area: diseñador;
+    width: 100%;
   }
   &__parrafo{
     padding: 0 40px;
   }
   &__link{
-    padding-left: 30px;
+    align-self: center;
   }
   
   
