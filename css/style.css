@@ -14,7 +14,8 @@ nav {
   background-color: #000; }
 
 .nav-item {
-  color: #c7c7c7; }
+  color: #c7c7c7;
+  font-size: "Bebas Neue", cursive; }
 
 .nav-item:hover {
   color: #5e5e5e; }
@@ -32,16 +33,14 @@ nav {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
-  grid-template-areas: 'destacado destacado' 'about     about' 'noticias  noticias';
-  background: #86949c;
-  background: linear-gradient(0deg, #86949c 0%, black 100%);
-  background-size: cover; }
+  grid-template-areas: "destacado destacado" "about     about" "compra  compra";
+  background-color: #fff; }
 
 .contenidoUno {
   grid-area: destacado;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.905)), url(../imagenes/img-1.jpg);
   background-size: cover;
-  height: 35rem;
+  height: 50em;
   width: 100%;
   margin-top: 1.5rem;
   display: flex;
@@ -68,35 +67,32 @@ nav {
     font-size: 2rem;
     font-family: "Bebas Neue", cursive; }
 
+/*****Seccion sobre ellos*****/
 .contenidoDos {
   grid-area: about;
-  background-image: url(../imagenes/blob-scene-haikei.svg);
-  background-size: cover;
+  background-color: #eee;
   height: auto;
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "texto foto";
   padding: 2.5rem;
   align-content: center;
   align-items: center; }
+  .contenidoDos__img {
+    grid-area: foto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center; }
   .contenidoDos__texto {
+    grid-area: texto;
     display: flex;
     flex-direction: column;
     width: 100%;
     padding-top: 40px;
     padding-bottom: 40px; }
-  .contenidoDos__img {
-    width: 80%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-self: center; }
-  .contenidoDos__hr {
-    width: 60%;
-    height: 1px;
-    background-color: #4d4d4d;
-    margin-left: 5px; }
   .contenidoDos__titulo {
     font-family: "Bebas Neue", cursive;
     font-size: 2.5rem;
@@ -108,149 +104,174 @@ nav {
     color: #363636;
     padding-top: 1.875rem; }
 
-.noticias {
-  grid-area: noticias;
+/*****seccion compras****/
+.compra {
+  grid-area: compras;
   background-color: #383838;
-  display: flex;
-  flex-direction: column;
-  height: 70rem;
-  background-color: #424242;
-  background-image: url("../imagenes/Sun-Tornado.svg");
-  background-size: cover; }
-  .noticias__titular {
-    height: 9rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "box store";
+  background-color: #1a1a1a;
+  height: auto; }
+  .compra__contenido {
+    grid-area: box;
     display: flex;
-    align-content: center;
+    flex-direction: column;
     align-items: center;
-    justify-content: center; }
-  .noticias__h2 {
-    font-family: "Bebas Neue", cursive;
-    font-size: 3rem; }
-  .noticias__contenido {
-    width: 90%;
-    background-color: #e9e9e9;
-    display: flex;
-    flex-direction: row;
-    margin: 1rem;
-    align-content: center;
-    align-items: center;
+    justify-content: center;
+    padding-top: 20px; }
+  .compra__texto {
+    padding: 2rem;
     align-self: center;
-    box-shadow: 4px 4px 7px -1px rgba(145, 145, 145, 0.75);
-    -webkit-box-shadow: 4px 4px 7px -1px rgba(145, 145, 145, 0.75);
-    -moz-box-shadow: 4px 4px 7px -1px rgba(145, 145, 145, 0.75);
-    transition: 1s; }
-  .noticias__img {
-    width: 100%;
-    height: 100%; }
-  .noticias__titulo {
-    font-family: "Bebas Neue", cursive;
-    color: #000;
-    padding-left: 1.25rem; }
-  .noticias__info {
-    font-family: "Source Sans Pro", sans-serif;
-    color: #4b4b4b; }
-  .noticias__texto {
-    padding: 1.25rem;
     display: flex;
     flex-direction: column; }
-  .noticias__btn {
+  .compra__img {
+    display: flex;
+    align-items: center;
+    width: 75%;
+    height: auto;
+    align-self: center;
+    justify-content: center; }
+  .compra__titulo {
+    font-family: "Bebas Neue", cursive;
     color: #fff;
+    padding-left: 2rem;
+    font-size: 2.5rem; }
+  .compra__info {
+    font-family: "Source Sans Pro", sans-serif;
+    color: #dadada;
+    font-size: 1.5rem; }
+  .compra__btn {
+    color: black;
     cursor: pointer;
     display: inline-block;
-    padding: 0.625em;
-    background-color: #000000;
+    align-self: flex-end;
+    padding: 1em;
+    background-color: #ffffff;
     font-size: 1em;
     text-transform: uppercase;
     letter-spacing: 1px;
-    align-self: flex-end;
     transition: 1s; }
-  .noticias__btn:hover {
+  .compra__btn a {
+    align-self: flex-end; }
+  .compra__btn:hover {
     transform: scale(1.04);
     background-color: #5e5e5e;
     text-decoration: none;
     color: #fff; }
-  .noticias__contenido:hover {
-    transform: scale(1.04); }
 
-section {
-  background-color: #192d8e;
-  background-image: url(../imagenes/blob-scene-haikei2.svg);
-  background-size: cover;
-  margin: 0; }
-
-/* ----- Integrantes ---- */
-.inte {
-  background-image: url(../imagenes/fondo.jpg);
-  background-size: cover;
-  height: 12.5em;
-  width: 100%; }
-  .inte__titulo {
+.store {
+  grid-area: store;
+  display: flex;
+  flex-direction: column;
+  background-color: #4b4b4b;
+  padding-top: 20px; }
+  .store__img {
+    display: flex;
+    align-items: center;
+    width: 75%;
+    height: auto;
+    align-self: center;
+    justify-content: center; }
+  .store__texto {
+    padding: 2rem;
+    align-self: center;
+    display: flex;
+    flex-direction: column; }
+  .store__titulo {
     font-family: "Bebas Neue", cursive;
     color: #fff;
-    font-size: 4.375em;
-    text-align: center;
-    margin: 0;
-    padding-top: 5.625rem; }
-
-.integrante {
-  background-color: #fff;
-  display: grid;
-  grid-template-columns: 40% 60%;
-  grid-template-rows: auto;
-  grid-template-areas: " img texto";
-  transition: 1s;
-  height: 21.875em; }
-  .integrante__imagen {
-    grid-area: img;
-    width: 95%;
-    align-self: center; }
-  .integrante__contenido {
-    grid-area: texto;
-    padding-right: 1.25em;
+    padding-left: 2rem;
+    font-size: 2.5rem; }
+  .store__info {
+    font-family: "Source Sans Pro", sans-serif;
+    color: #dadada;
+    font-size: 1.5rem; }
+  .store__btn {
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+    align-self: flex-end;
+    padding: 1em;
+    background-color: #ffffff;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     transition: 1s; }
-  .integrante__titulo {
+  .store__btn a {
+    align-self: flex-end; }
+  .store__btn:hover {
+    transform: scale(1.04);
+    background-color: #000000;
+    text-decoration: none;
+    color: #fff; }
+
+/* ----- Integrantes ---- */
+.integrantes {
+  background-color: #ffffff;
+  height: auto; }
+
+.titular {
+  height: 12.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start; }
+  .titular__h2 {
     font-family: "Bebas Neue", cursive;
+    font-size: 4rem;
     color: #000;
-    text-decoration: underline;
-    font-size: 1.875em;
-    padding-left: 1.25em;
-    padding-top: 0.625em; }
-  .integrante__parrafo {
-    font-family: "Source Sans Pro", sans-serif;
-    color: #3f3f3f;
-    font-size: 1.25em; }
-  .integrante__contenido:hover {
-    transform: scale(1.03); }
+    align-self: center;
+    padding-left: 20px;
+    padding-top: 100px; }
 
-.integrante2 {
-  background-color: #222222;
+.miembros {
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 1fr;
   grid-template-rows: auto;
-  grid-template-areas: " texto2 img2";
-  transition: 1s;
-  height: 20em; }
-  .integrante2__imagen {
-    grid-area: img2;
-    width: 95%;
-    align-self: center; }
-  .integrante2__contenido {
-    grid-area: texto2;
-    padding-right: 1.875em;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: auto;
+  width: 100%;
+  grid-gap: 20px;
+  padding: 20px; }
+  .miembros__contenido {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    height: auto;
+    background-color: #1f1f1f;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
     transition: 1s; }
-  .integrante2__titulo {
+  .miembros__img {
+    clip-path: polygon(0 0, 85% 0, 100% 100%, 0% 100%);
+    height: auto; }
+  .miembros__texto {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .miembros__titulo {
     font-family: "Bebas Neue", cursive;
-    color: white;
-    text-decoration: underline;
-    font-size: 1.875em;
-    padding-left: 1.25em;
-    padding-top: 1.875em; }
-  .integrante2__parrafo {
+    font-size: 2rem;
+    color: #fff; }
+  .miembros__info {
     font-family: "Source Sans Pro", sans-serif;
-    color: #d1d1d1;
-    font-size: 1.25em; }
-  .integrante2__contenido:hover {
-    transform: scale(1.03); }
+    font-size: 1.3rem;
+    color: #a7a7a7; }
+  .miembros__contenido:hover {
+    background-color: #000; }
+
+.dos {
+  display: flex;
+  flex-direction: row-reverse; }
+
+.dos .miembros__img {
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%); }
 
 /*--------- Final integrantes flexbox ------ */
 h2 {
@@ -265,6 +286,10 @@ p {
   padding: 0.625em 1.25em; }
 
 /* ------ Discografia Css Grid---- */
+.mainDiscografia {
+  height: auto;
+  background-color: #fff; }
+
 .disco {
   display: flex;
   align-content: center;
@@ -275,75 +300,116 @@ p {
     font-family: "Bebas Neue", cursive;
     font-size: 3.75em;
     align-self: center;
-    padding-top: 3.75rem; }
-
-.mainDiscografia {
-  background-image: url(../imagenes/Sun-Tornado.svg);
-  background-size: cover;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  grid-template-areas: 'titulo' 'discografia'; }
+    padding-top: 3.75rem;
+    color: #000; }
 
 .discografia {
-  grid-area: discografia;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "album   album   album  album" "album   album   album  album";
+  grid-gap: 20px; }
+
+.album {
+  grid-area: album;
   display: flex;
-  flex-direction: column; }
-  .discografia__contenido {
-    width: 90%;
-    background-color: #f1f1f1;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 20px;
+  justify-content: center; }
+  .album__contenido {
     display: flex;
-    flex-direction: row;
-    margin: 1rem;
-    align-content: center;
-    align-items: center;
-    align-self: center;
-    box-shadow: 4px 4px 7px -1px rgba(145, 145, 145, 0.75);
-    -webkit-box-shadow: 4px 4px 7px -1px rgba(145, 145, 145, 0.75);
-    -moz-box-shadow: 4px 4px 7px -1px rgba(145, 145, 145, 0.75);
-    transition: 1s; }
-  .discografia__titulo {
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: 2s; }
+  .album__contenido p {
     font-family: "Bebas Neue", cursive;
+    font-size: 1.5rem;
+    color: #ffffff;
+    align-self: center;
+    position: absolute;
+    bottom: -100%;
+    transition: 1s; }
+  .album__contenido:hover p {
+    bottom: 30%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.905)); }
+  .album__img {
+    width: 15rem;
+    height: auto;
+    box-shadow: 4px 4px 5px 0px #202020bf; }
+  .album__contenido:hover {
+    transform: scale(1.05); }
+
+.musica {
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "musica videos";
+  background-color: #e9e9e9; }
+
+.spotify {
+  grid-area: musica;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; }
+  .spotify__titulo {
+    font-family: "Bebas Neue", cursive;
+    font-size: 3rem;
     color: #000;
-    padding-left: 1.25rem; }
-  .discografia__info {
-    font-family: "Source Sans Pro", sans-serif;
-    color: #4b4b4b; }
-  .discografia__time {
-    font-family: "Source Sans Pro", sans-serif;
-    color: #4b4b4b; }
-  .discografia__texto {
-    padding: 2rem;
-    display: flex;
-    flex-direction: column; }
-  .discografia__iframe {
-    width: 20rem;
-    height: 100%; }
-  .discografia__contenido:hover {
-    transform: scale(1.04); }
+    padding: 20px; }
+  .spotify__iframe {
+    width: 90%;
+    height: 28em;
+    padding: 20px; }
+
+.videos {
+  grid-area: videos;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; }
+  .videos__titulo {
+    font-family: "Bebas Neue", cursive;
+    font-size: 3rem;
+    color: #000;
+    padding: 20px; }
+  .videos__iframe {
+    padding: 20px;
+    width: 45%; }
 
 /*--- ------ final de discografia ---- */
 /*----- Galeria -----*/
+.mainGaleria {
+  height: auto;
+  background-color: #222222; }
+
 .gale {
-  background-image: url(../imagenes/fondo.jpg);
-  background-size: cover;
-  height: 12rem;
-  width: 100%; }
+  height: 10rem; }
   .gale__titulo {
     font-family: "Bebas Neue", cursive;
-    color: #fff;
+    color: #ffffff;
     font-size: 4.375em;
     text-align: center;
     margin: 0;
-    padding-top: 5.625rem; }
+    padding-top: 5.625rem;
+    padding-top: 2rem; }
+
+.carousel {
+  margin-top: 60px; }
 
 .galeria {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-auto-rows: minmax(250px, auto);
   gap: 15px;
-  padding: 10px;
-  grid-auto-flow: dense; }
+  padding: 20px;
+  grid-auto-flow: dense;
+  background-color: #222222; }
   .galeria__item-1, .galeria__item-2, .galeria__item-3, .galeria__item-4, .galeria__item-5, .galeria__item-6, .galeria__item-7, .galeria__item-8, .galeria__item-9, .galeria__item-10 {
     display: flex;
     align-items: center;
@@ -354,6 +420,7 @@ p {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    box-shadow: 1px 2px 5px 0px rgba(202, 202, 202, 0.75);
     transition: 1s; }
   .galeria__item-2 {
     background-image: url(../imagenes/galeria2.jpg); }
@@ -381,264 +448,295 @@ p {
   transition: 1s; }
 
 .galeria div:hover {
-  transform: scale(1.05);
-  box-shadow: 3px 3px 3px #838383; }
+  transform: scale(1.03); }
+
+/*****seccion conciertos*****/
+.conciertos {
+  height: auto;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .conciertos__titulo {
+    font-family: "Bebas Neue", cursive;
+    font-size: 4rem;
+    color: #000;
+    align-self: center;
+    padding-top: 40px; }
+  .conciertos__embeed {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px; }
+  .conciertos__iframe {
+    padding: 51px;
+    width: 50%;
+    height: 25rem; }
 
 /*---- Final Galeria ----*/
 /*------- Contacto ------- */
-.contacto {
-  background: black;
-  background: linear-gradient(74deg, black 0%, #545454 48%, #969696 93%);
-  height: 800px;
-  padding-top: 110px;
-  padding-left: 90px; }
+.mainContacto {
+  height: auto;
+  background-color: #383838; }
 
-.formCont {
+.formulario {
+  height: auto;
   width: 90%;
-  height: 600px;
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
-  grid-template-areas: " info label";
-  background-color: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); }
-
-.cont {
-  grid-area: info;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-image: url(../imagenes/contac.jpg);
-  background-size: cover; }
-  .cont__titulo {
+  grid-template-areas: "info form";
+  margin-top: 3.75rem;
+  padding: 1.25rem;
+  padding-left: 10rem; }
+  .formulario__contenido {
+    height: 37.5rem;
+    grid-area: info;
+    background-image: url(../imagenes/contac.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.875rem; }
+  .formulario__titulo {
+    font-family: "Bebas Neue", cursive;
+    font-size: 3rem;
+    color: #fff; }
+  .formulario__contenido i {
+    font-size: 2rem;
     color: #fff;
-    font-family: 'Bebas Neue', cursive;
-    font-size: 40px; }
-  .cont__item {
-    font-size: 25px;
-    font-family: 'Source Sans Pro', sans-serif;
-    word-spacing: 5px; }
-  .cont__mapa {
-    font-family: 'Bebas Neue', cursive; }
-  .cont__mapa iframe {
-    width: 30%;
-    height: 150px; }
-  .cont__user {
+    padding: 0.3125rem; }
+  .formulario__contenido span {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 2rem;
     color: #fff;
-    font-size: 60px; }
-  .cont hr {
-    background-color: #fff;
-    width: 99%;
-    height: 0.5px; }
+    padding: 0.3125rem; }
+  .formulario__hr {
+    width: 60%;
+    height: 1px;
+    background-color: #fff; }
 
 .form {
-  grid-area: label;
+  height: 37.5rem;
+  grid-area: form;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
-  padding: 30px 40px; }
-  .form__titu {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 40px;
+  justify-content: center;
+  padding: 1.25rem; }
+  .form__titulo {
+    font-family: "Bebas Neue", cursive;
+    font-size: 3rem;
     color: #000; }
-  .form__info {
-    display: flex;
-    flex-direction: column; }
   .form__label {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 24px; }
+    font-family: "Bebas Neue", cursive;
+    font-size: 1.3rem;
+    color: #383838;
+    padding-top: 0.5rem; }
   .form__input {
-    width: 70%;
-    border: none;
-    border-bottom: 2px solid #222222;
-    transition: 1s; }
-  .form__text {
-    width: 70%;
-    height: 70px;
-    border: none;
-    border-bottom: 2px solid #222222; }
+    width: 60%;
+    height: 6%;
+    padding: 0.625rem;
+    transition: 0.3s; }
+  .form__suscripcion {
+    display: flex;
+    flex-direction: row;
+    padding: 10px; }
+  .form__checkbox {
+    margin-left: 1.25rem; }
+  .form__textarea {
+    width: 60%;
+    height: 14%;
+    padding: 0.625rem; }
   .form__btn {
-    width: 40%;
-    background-color: #222222;
-    padding: 10px;
-    border: none;
-    border-radius: 25px;
-    align-self: flex-end;
-    color: #fff;
-    font-family: 'Bebas Neue', cursive;
-    font-size: 16px;
-    font-weight: 600;
+    font-family: "Bebas Neue", cursive;
+    color: #fff9f9;
     cursor: pointer;
-    position: relative;
-    top: 40px;
+    display: inline-block;
+    align-self: flex-end;
+    padding: 1em;
+    background-color: #000000;
+    box-shadow: 0px 10px 14px -7px #8c8c8c;
+    border-radius: 4px;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     transition: 1s; }
   .form__input:hover {
-    border: none;
-    border-bottom: 4px solid black; }
+    background-color: #000;
+    color: #eee; }
+  .form__textarea:hover {
+    background-color: #000;
+    color: #eee; }
   .form__btn:hover {
-    background-color: #868686;
-    transform: scale(1.03); }
+    transform: scale(1.05); }
 
 /*------ Final Contacto ------- */
 /*----- Footer ---------*/
 .footer {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
-  grid-template-areas: " texto redes" "diseñador diseñador";
-  background-color: #1b1b1b; }
+  grid-template-areas: "contenido img redes" "creador creador creador";
+  height: auto;
+  background-color: #000; }
   .footer__contenido {
-    grid-area: texto;
-    align-self: center;
-    padding-left: 30px;
-    transition: 1s; }
-  .footer__hr {
-    width: 90%;
-    background-color: #eee;
-    height: 1px;
-    align-self: center; }
+    grid-area: contenido;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.6rem; }
   .footer__titulo, .footer__redesTitulo {
     font-family: "Bebas Neue", cursive;
-    font-size: 25px;
-    color: #fff;
-    padding-top: 30px;
-    padding-left: 130px; }
+    font-size: 2rem;
+    align-self: center;
+    color: #fff; }
+  .footer__parrafo {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1rem;
+    color: #c5c5c5;
+    align-self: center; }
+  .footer__hrContenido, .footer__hrRedes {
+    width: 60%;
+    height: 1px;
+    background-color: #fff; }
+  .footer__img {
+    grid-area: img;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .footer__imagen {
+    align-self: center;
+    width: 3.75rem; }
   .footer__redes {
     grid-area: redes;
-    font-size: 30px; }
-  .footer__link {
-    color: #9c9c9c;
-    text-decoration: none;
-    padding-left: 40px;
-    padding-top: 20px; }
-  .footer__parrafo {
-    color: #9c9c9c;
-    font-size: 18px;
-    padding-right: 140px; }
-  .footer__titular {
-    grid-area: diseñador;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.6rem; }
+  .footer__item {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    background-color: #272727;
-    align-self: center;
     align-items: center;
-    word-spacing: 3px; }
+    justify-content: center; }
+  .footer__link {
+    color: #c5c5c5;
+    font-size: 1.5rem;
+    align-self: center;
+    letter-spacing: 30px;
+    transition: 1s; }
+  .footer__link:hover {
+    transform: scale(1.05);
+    color: #fff; }
+  .footer__creador {
+    grid-area: creador;
+    background-color: #414141;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
   .footer__diseñador {
     font-family: "Source Sans Pro", sans-serif;
-    color: #fff;
-    font-size: 15px; }
+    font-size: 1.2rem; }
   .footer__linke {
     font-family: "Bebas Neue", cursive;
-    color: #c0c0c0;
+    font-size: 1.5rem;
+    color: #fff;
     text-decoration: none;
-    font-size: 19px;
     transition: 1s; }
-  .footer__contenido:hover {
-    transform: scale(1.04);
-    color: #fff; }
-  .footer__link:hover {
-    transform: scale(1.04);
-    color: #fff;
-    text-decoration: none; }
   .footer__linke:hover {
-    transform: scale(1.04);
-    color: #fff;
-    text-decoration: none; }
+    transform: scale(1.05);
+    text-decoration: none;
+    color: #000000; }
 
 /*------ media queries---------*/
 @media only screen and (max-width: 768px) {
   .main {
     width: 100%; }
+  /**seccion index**/
   .contenidoUno__subtitulo {
     background-color: rgba(0, 0, 0, 0.514); }
+  /***seccion sobre ellos***/
   .contenidoDos {
-    display: flex;
-    flex-direction: row;
-    height: 61rem; }
-    .contenidoDos__texto {
-      width: 100%;
-      font-size: 2rem; }
+    height: auto; }
+    .contenidoDos__parrafo {
+      font-size: 1rem; }
     .contenidoDos__tiulo {
-      padding-top: 10px; }
+      padding-top: 10px;
+      padding-left: 1rem;
+      font-size: 1.5rem; }
     .contenidoDos__img {
       width: 100%;
-      height: 30rem; }
-  .noticias {
-    height: 78rem; }
-    .noticias__titulo {
-      font-size: 1.5rem; }
-    .noticias__info {
+      height: auto; }
+  /** seccion compra **/
+  .compra {
+    height: auto; }
+    .compra__titulo {
+      font-size: 1.5rem;
+      padding-left: 1.25rem; }
+    .compra__info {
       font-size: 1rem; }
-    .noticias__img {
-      width: 18.75rem;
-      height: 100%; }
+    .compra__img {
+      width: 80%;
+      height: auto; }
+  /****seccion compra index***/
+  .store {
+    height: auto; }
+    .store__titulo {
+      font-size: 1.5rem;
+      padding-left: 1.25rem; }
+    .store__info {
+      font-size: 1rem; }
+    .store__img {
+      width: 80%;
+      height: auto; }
   /*----- Integrantes ----*/
-  .inte__titulo {
-    font-size: 50px; }
-  .integrante {
-    display: grid;
-    grid-template-columns: 40% 60%;
-    grid-template-rows: auto;
-    grid-template-areas: " img texto";
-    transition: 1s;
-    height: 410px; }
-    .integrante__imagen {
-      grid-area: img; }
-    .integrante____contenido {
-      grid-area: texto;
-      padding: 20px;
-      transition: 1s; }
-    .integrante__titulo {
-      font-size: 20px; }
-    .integrante__parrafo {
-      font-size: 16px; }
-  .integrante2 {
-    height: 350px; }
-    .integrante2____contenido {
-      padding: 20px; }
-    .integrante2__titulo {
-      font-size: 20px; }
-    .integrante2__parrafo {
-      font-size: 16px; }
+  .miembros {
+    height: auto; }
+    .miembros__info {
+      font-size: 1rem; }
+    .miembros__img {
+      width: 300px;
+      height: auto;
+      background: center; }
   /*---- Discografia ----*/
   .mainDiscografia {
     height: auto; }
   .discografia__iframe {
     width: 20rem;
     height: 100%; }
+  .musica {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .videos__iframe {
+    margin-left: 1.25rem; }
   /*------ Contacto ---*/
-  .contacto {
-    padding-left: 40px; }
-  .formCont {
-    width: 95%;
-    height: 600px; }
-  .cont {
-    width: 100%; }
-  .cont__titulo {
-    font-size: 30px; }
-  .cont__item {
-    font-size: 20px;
-    padding-left: 5px; }
-  .cont__user {
-    font-size: 40px; }
-  .cont iframe {
-    width: 90%; }
-  .form__label {
-    font-size: 20px; }
+  .formulario {
+    padding-left: 1.5rem; }
+    .formulario__titulo {
+      font-size: 2rem; }
+    .formulario__contenido i {
+      font-size: 1.5rem; }
+    .formulario__contenido span {
+      font-size: 1.5rem; }
+  .form {
+    width: 22.5em;
+    padding: 30px; }
+    .form__titulo {
+      font-size: 2rem; }
   /*----- footer --- */
   .footer__titulo, .footer__redesTitulo {
-    padding-left: 30px; }
-  .footer__hr {
-    width: 90%; }
-  .footer__redes {
-    margin-left: 60px; }
+    font-size: 1.4rem; }
   .footer__link {
-    padding-left: 20px; }
-  .footer__parrafo {
-    padding: 0px; } }
+    font-size: 1rem;
+    letter-spacing: 10px; }
+  /*********fin medai 768px********/ }
 
 @media only screen and (max-width: 480px) {
   /*---- nav ------ */
@@ -653,89 +751,87 @@ p {
     flex-direction: column; }
   .contenidoUno__span {
     font-size: 2rem; }
+  /********seccion sobre ellos***********/
   .contenidoDos {
-    height: 80rem;
-    padding: 10px; }
+    height: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column; }
+    .contenidoDos__img {
+      width: 90%;
+      height: auto; }
     .contenidoDos__texto {
       font-size: 1rem; }
-  .noticias {
-    height: 120rem; }
-    .noticias__contenido {
+  /********seccion compra*************/
+  .compra {
+    height: auto;
+    display: flex;
+    flex-direction: column; }
+    .compra__contenido {
       display: flex;
       flex-direction: column; }
-    .noticias__img {
-      width: 100%;
-      height: 100%; }
+    .compra__img {
+      width: 80%;
+      height: auto;
+      margin: 0; }
+    .compra__btn {
+      align-self: flex-end; }
   /*---- Integrantes ---*/
-  .integrante {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
-    grid-template-areas: "img" "texto";
-    height: 710px; }
-    .integrante__imagen {
-      grid-area: img;
-      padding-left: 15px; }
-    .integrante____contenido {
-      grid-area: texto;
-      padding: 20px;
-      transition: 1s; }
-    .integrante__titulo {
-      font-size: 20px; }
-    .integrante__parrafo {
-      font-size: 17px; }
-  .integrante2 {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
-    grid-template-areas: "img2" "texto2";
-    height: 610px; }
-    .integrante2__imagen {
-      grid-area: img2;
-      padding-left: 15px; }
-    .integrante2____contenido {
-      grid-area: texto2;
-      padding: 20px;
-      transition: 1s; }
-    .integrante2__titulo {
-      font-size: 20px; }
-    .integrante2__parrafo {
-      font-size: 17px; }
+  .miembros {
+    margin-left: 45px; }
+    .miembros__contenido {
+      display: flex;
+      flex-direction: column;
+      width: 80%; }
+    .miembros__texto {
+      padding: 20px; }
+    .miembros__img {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      width: 100%;
+      height: 300px; }
+  .dos .miembros__img {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    width: 100%;
+    height: 300px; }
   /*---- Discografia ----*/
   .mainDiscografia {
     height: auto; }
   .disco__titulo {
-    font-size: 3.5rem; }
-  .discografia__contenido {
+    font-size: 2rem; }
+  .spotify__titulo {
+    font-size: 2rem; }
+  .videos__embeed {
     display: flex;
-    flex-direction: column-reverse; }
-  .discografia__iframe {
+    flex-direction: column;
+    justify-content: center; }
+  .videos__iframe {
     width: 100%; }
+  .videos__titulo {
+    font-size: 2rem; }
   /**--------Fin Discografia---------------**/
   .wide {
     grid-column: span 1; }
-  /*------ Contacto ---*/
-  .contacto {
-    height: 1300px;
-    padding-right: 40px; }
-  .formCont {
-    width: 100%;
-    height: 1150px;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: auto;
-    grid-template-areas: "label1" "info1"; }
-  .cont {
-    grid-area: label1; }
-  .cont__user {
+  /***conciertos - galeria**/
+  .gale__titulo {
+    font-size: 3rem; }
+  .conciertos {
     display: flex;
-    flex-direction: row;
-    font-size: 60px;
-    position: relative;
-    top: 70px;
-    right: 100px; }
+    flex-direction: column; }
+    .conciertos__titulo {
+      font-size: 3rem; }
+    .conciertos__embeed {
+      display: flex;
+      flex-direction: column; }
+    .conciertos__iframe {
+      width: 100%;
+      height: 300px; }
+  /*------ Contacto ---*/
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    width: 100%; }
   .form {
-    grid-area: info1; }
+    width: 100%; }
   /*----- footer ---*/
   .footer {
     display: flex;
@@ -745,27 +841,8 @@ p {
     align-content: center;
     margin: 0px;
     padding: 0px; }
-    .footer__contenido {
-      grid-area: contenido;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      align-content: center; }
-    .footer__contenido hr {
-      padding-left: 25px; }
-    .footer__titulo, .footer__redesTitulo {
-      align-self: center; }
-    .footer__redesTitulo {
-      align-self: center; }
-    .footer__redes {
-      grid-area: redes;
-      height: 170px; }
-    .footer__titular {
-      grid-area: diseñador;
-      width: 100%; }
-    .footer__parrafo {
-      padding: 0 40px; }
     .footer__link {
-      align-self: center; }
+      font-size: 2rem; }
+    .footer__creador {
+      width: 100%; }
   /* fin de 480px*/ }
