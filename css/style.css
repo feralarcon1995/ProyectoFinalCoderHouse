@@ -778,11 +778,15 @@ p {
       align-self: flex-end; }
   /*---- Integrantes ---*/
   .miembros {
-    margin-left: 45px; }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center; }
     .miembros__contenido {
+      align-self: center;
       display: flex;
-      flex-direction: column;
-      width: 80%; }
+      flex-direction: column; }
     .miembros__texto {
       padding: 20px; }
     .miembros__img {
@@ -800,14 +804,21 @@ p {
     font-size: 2rem; }
   .spotify__titulo {
     font-size: 2rem; }
-  .videos__embeed {
+  .videos {
     display: flex;
-    flex-direction: column;
-    justify-content: center; }
-  .videos__iframe {
-    width: 100%; }
-  .videos__titulo {
-    font-size: 2rem; }
+    flex-direction: column; }
+    .videos__titulo {
+      font-size: 2rem;
+      align-self: center; }
+    .videos__embeed {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      align-items: center; }
+    .videos__iframe {
+      width: 100%;
+      align-self: center; }
   /**--------Fin Discografia---------------**/
   .wide {
     grid-column: span 1; }
@@ -824,7 +835,7 @@ p {
       flex-direction: column; }
     .conciertos__iframe {
       width: 100%;
-      height: 300px; }
+      height: 400px; }
   /*------ Contacto ---*/
   .formulario {
     display: flex;

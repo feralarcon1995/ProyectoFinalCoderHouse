@@ -364,7 +364,7 @@ p {
     font-size: 3.75em;
     align-self: center;
     padding-top: 3.75rem;
-    color:#000;
+    color: #000;
   }
 }
 .discografia {
@@ -457,7 +457,7 @@ p {
     padding: 20px;
     width: 45%;
   }
-  }
+}
 
 /*--- ------ final de discografia ---- */
 
@@ -600,7 +600,6 @@ p {
   padding: 1.25rem;
   padding-left: 10rem;
 
-
   &__contenido {
     height: 37.5rem;
     grid-area: info;
@@ -664,15 +663,15 @@ p {
     flex-direction: row;
     padding: 10px;
   }
-  &__checkbox{
+  &__checkbox {
     margin-left: 1.25rem;
   }
-  &__textarea{
+  &__textarea {
     width: 60%;
     height: 14%;
     padding: 0.625rem;
   }
-  &__btn{
+  &__btn {
     font-family: $titulo;
     color: #fff9f9;
     cursor: pointer;
@@ -688,19 +687,18 @@ p {
     transition: 1s;
   }
 
-  &__input:hover{
+  &__input:hover {
     background-color: #000;
     color: #eee;
   }
-  &__textarea:hover{
+  &__textarea:hover {
     background-color: #000;
     color: #eee;
   }
 
-  &__btn:hover{
+  &__btn:hover {
     transform: scale(1.05);
   }
-  
 }
 
 /*------ Final Contacto ------- */
@@ -899,24 +897,24 @@ p {
   }
 
   /*------ Contacto ---*/
-  .formulario{
+  .formulario {
     padding-left: 1.5rem;
-    
-    &__titulo{
+
+    &__titulo {
       font-size: 2rem;
     }
-    &__contenido i{
+    &__contenido i {
       font-size: 1.5rem;
     }
-    &__contenido span{
+    &__contenido span {
       font-size: 1.5rem;
     }
   }
 
-  .form{
+  .form {
     width: 22.5em;
     padding: 30px;
-        &__titulo{
+    &__titulo {
       font-size: 2rem;
     }
   }
@@ -989,11 +987,15 @@ p {
   }
   /*---- Integrantes ---*/
   .miembros {
-    margin-left: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
     &__contenido {
+      align-self: center;
       display: flex;
       flex-direction: column;
-      width: 80%;
     }
     &__texto {
       padding: 20px;
@@ -1021,17 +1023,26 @@ p {
   .spotify__titulo {
     font-size: 2rem;
   }
-  .videos__embeed {
+  .videos {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    &__titulo {
+      font-size: 2rem;
+      align-self: center;
+    }
+    &__embeed {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+    }
+    &__iframe {
+      width: 100%;
+      align-self: center;
+    }
   }
-  .videos__iframe{
-    width: 100%;
-  }
-  .videos__titulo {
-    font-size: 2rem;
-  }
+
   /**--------Fin Discografia---------------**/
   .wide {
     grid-column: span 1;
@@ -1052,16 +1063,16 @@ p {
     }
     &__iframe {
       width: 100%;
-      height: 300px;
+      height: 400px;
     }
   }
   /*------ Contacto ---*/
-  .formulario{
+  .formulario {
     display: flex;
     flex-direction: column;
     width: 100%;
   }
-  .form{
+  .form {
     width: 100%;
   }
   /*----- footer ---*/
