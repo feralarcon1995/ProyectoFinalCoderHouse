@@ -786,9 +786,11 @@ p {
     .miembros__contenido {
       align-self: center;
       display: flex;
-      flex-direction: column; }
+      flex-direction: column;
+      width: 98%;
+      height: auto; }
     .miembros__texto {
-      padding: 20px; }
+      padding: 10px; }
     .miembros__img {
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
       width: 100%;
@@ -797,6 +799,8 @@ p {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     width: 100%;
     height: 300px; }
+  .miembros img {
+    width: 100%; }
   /*---- Discografia ----*/
   .mainDiscografia {
     height: auto; }
