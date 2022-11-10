@@ -7,7 +7,8 @@
   box-sizing: border-box; }
 
 body {
-  font-size: 16px; }
+  font-size: 16px;
+overflow: hidden; }
 
 /*------ Navegador ----*/
 nav {
@@ -19,10 +20,19 @@ nav {
 
 .nav-item:hover {
   color: #5e5e5e; }
+.navbar-brand img{
+width:32px;
+height: 32px;
+}
 
 .social {
   display: flex;
-  flex-direction: row; }
+  flex-direction: row; 
+}
+
+.fa-bars{
+  color:#fff;
+}  
 
 /*------ Body ------*/
 .main {
@@ -33,7 +43,9 @@ nav {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
-  grid-template-areas: "destacado destacado" "about     about" "compra  compra";
+  grid-template-areas: "destacado destacado"
+ "about     about"
+ "compra  compra";
   background-color: #fff; }
 
 .contenidoUno {
@@ -307,7 +319,8 @@ p {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
-  grid-template-areas: "album   album   album  album" "album   album   album  album";
+  grid-template-areas: "album   album   album  album"
+ "album   album   album  album";
   grid-gap: 20px; }
 
 .album {
@@ -550,7 +563,8 @@ p {
   .form__textarea {
     width: 60%;
     height: 14%;
-    padding: 0.625rem; }
+    padding: 0.625rem;
+  resize: none; }
   .form__btn {
     font-family: "Bebas Neue", cursive;
     color: #fff9f9;
@@ -580,7 +594,8 @@ p {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
-  grid-template-areas: "contenido img redes" "creador creador creador";
+  grid-template-areas: "contenido img redes"
+ "creador creador creador";
   height: auto;
   background-color: #000; }
   .footer__contenido {
@@ -739,9 +754,19 @@ p {
   /*********fin medai 768px********/ }
 
 @media only screen and (max-width: 480px) {
+
+  
   /*---- nav ------ */
+   .navi{
+    width: 50%;
+    text-align: right;
+   }
   .social {
-    letter-spacing: 8px; }
+    letter-spacing: 8px;
+    width: 50%;
+    overflow: hidden;
+    align-self: flex-end;
+    justify-content: space-around;}
   /*----- index ------*/
   .contenidoUno__titulo {
     font-size: 5rem; }
@@ -777,6 +802,7 @@ p {
     .compra__btn {
       align-self: flex-end; }
   /*---- Integrantes ---*/
+  
   .miembros {
     display: flex;
     flex-direction: column;
